@@ -76,7 +76,7 @@ form input[type='checkbox'] {
   width: 2rem;
   height: 2.5rem;
   display: relative;
-  top: 4rem;
+  top: 3rem;
   left: 2rem;
 }
 .login .informacao .T100 {
@@ -115,8 +115,8 @@ form .fotoPaciente {
 }
 
 form .fotoPaciente img {
-  width: 20.0rem;
-  height: 20.0rem;
+  width: 20rem;
+  height: 20rem;
 }
 
 a {
@@ -131,4 +131,8 @@ a:hover {
 .T100 .documentacao {
   display: grid;
   /* grid-template-areas:  */
+}
+
+form.T50 {
+  background-color: blue;
 }
