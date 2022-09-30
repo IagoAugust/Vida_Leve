@@ -119,15 +119,6 @@ form .fotoPaciente img {
   height: 20rem;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-  font-size: 1.8rem;
-}
-
-a:hover {
-  color: #687482;
-}
 
 .T100 .documentacao {
   display: grid;
