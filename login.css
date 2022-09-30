@@ -203,7 +203,7 @@ form input[type='checkbox'] {
   left: 2rem;
 }
 
-.btn-voltar {
+/* .btn-voltar {
   text-decoration: none;
   color: black;
   font-size: 1.8rem;
@@ -211,4 +211,4 @@ form input[type='checkbox'] {
 
 .btn-voltar:hover {
   color: #687482;
-}
+} */
