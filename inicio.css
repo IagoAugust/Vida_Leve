@@ -1,0 +1,173 @@
+/* ------ Cabeçalho ------- */
+.container {
+  width: 100%;
+  height: 6.2rem;
+  background-color: #cbcdcf;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .nome-pagina {
+  display: flex;
+  padding: 1.2rem 2.4rem;
+}
+
+.container .nome-pagina p {
+  font-size: 1.8rem;
+  line-height: 2, 2rem;
+  margin: auto auto;
+}
+
+.perfil {
+  display: flex;
+  gap: 3.2rem;
+  padding: 1.2rem 2.4rem;
+}
+
+.perfil p {
+  margin: auto auto;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+
+.perfil img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  margin-top: -0.5rem;
+  background-color: white;
+}
+
+/* ---------- Pesquisa ------------- */
+
+.box-geral {
+  margin: 8.31rem 11.8rem 84rem 14.2rem;
+}
+
+.box-geral .pesquisa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10rem;
+}
+
+.box-geral .pesquisa > div > a {
+  display: block;
+
+  width: 16rem;
+  height: 4.2rem;
+
+  border: 0.1rem solid #888;
+  border-radius: 2rem;
+
+  font-size: 1.6rem;
+  text-align: center;
+
+  padding-top: 1.1rem;
+
+  background-color: #71839b;
+  color: #fff;
+}
+
+.box-geral .pesquisa > div > button:hover {
+  background-color: #687482;
+}
+
+.box-geral .pesquisa form {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.box-geral .pesquisa form span {
+  width: 2.2rem;
+  height: 4rem;
+  color: #687482;
+  position: relative;
+  left: 5rem;
+  top: 0.7rem;
+}
+
+.box-geral .pesquisa form input[type='search'] {
+  width: 44.8rem;
+  height: 3.8rem;
+  border: 0.1rem solid #687482;
+  border-radius: 1.5rem;
+  padding-left: 3rem;
+}
+
+.box-geral .pesquisa form input[type='submit'] {
+  width: 7.8rem;
+  height: 3.8rem;
+  border: 1px solid #71839b;
+  border-radius: 0.5rem;
+}
+
+.box-geral .pesquisa form input[type='submit']:hover {
+  background-color: var(--botao-hover);
+}
+
+/* ---------- Lista ------------- */
+
+.lista {
+  /* border: .1rem solid ;   */
+
+  box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.24);
+  border-radius: 0.8rem;
+
+  padding: 1.8rem 1.6rem;
+}
+
+.lista h2 {
+  flex-grow: 1;
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+}
+
+.lista .box-elementos {
+  /* display: flex;
+  flex-direction: column; */
+
+  border: 0.1rem solid #abb;
+  border-radius: 0.8rem;
+
+  padding: 1.5rem;
+}
+
+.lista .box-elementos .filtro,
+.lista .box-elementos .elementos {
+  /* display: flex;
+  flex-direction: row;
+  gap: 25%; */
+
+  background-color: blueviolet;
+  /* border: 0.1rem solid black; */
+  display: grid;
+  column-gap: 1.5rem;
+  grid-template-columns: auto auto auto auto;
+}
+
+.lista .box-elementos .filtro, .elementos{
+  background-color: blue;
+  
+  }
+
+  .elementos span{
+  display: inline-block;
+  font-size: 1.8rem;
+  background-color: yellowgreen;
+  color: #555;
+}
+
+.lista .box-elementos .box-paciente,
+.lista .box-elementos .box-visita,
+.lista .box-elementos .box-dados,
+.lista .box-elementos .box-status{
+  border: 0.1rem solid black;
+
+  /* display: flex;
+  flex-direction: column;
+  padding: 1rem; */
+  /* gap: 1.5rem; */
+  background-color: aqua;
+}
