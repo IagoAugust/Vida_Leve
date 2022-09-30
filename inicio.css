@@ -134,20 +134,22 @@
 
 
 .lista .box-elementos .elementos {
-  /* border: 0.1rem solid black; */
   display: grid;
   column-gap: 1.5rem;
   /* grid-template-columns: auto auto auto auto; */
   grid-template-areas: "A B C D";
-  /* background-color: yellowgreen; */
+  background-color: yellowgreen;
 }
 
-.lista .box-elementos .elementos
+.lista .box-elementos .elementos>div{
+  background-color: #71839b;
+}
+
+
 
 .elementos span {
   display: inline-block;
-  font-size: 1.8rem;
-  /* background-color: yellowgreen; */
+  font-size: 1.2rem;
   color: #555;
 }
 
