@@ -66,11 +66,13 @@
 
   padding-top: 1.1rem;
 
+  text-decoration: none;
+
   background-color: #71839b;
   color: #fff;
 }
 
-.box-geral .pesquisa > div > button:hover {
+.box-geral .pesquisa > div > a:hover {
   background-color: #687482;
 }
 
@@ -125,49 +127,36 @@
 }
 
 .lista .box-elementos {
-  /* display: flex;
-  flex-direction: column; */
-
   border: 0.1rem solid #abb;
   border-radius: 0.8rem;
-
   padding: 1.5rem;
 }
 
-.lista .box-elementos .filtro,
-.lista .box-elementos .elementos {
-  /* display: flex;
-  flex-direction: row;
-  gap: 25%; */
 
-  background-color: blueviolet;
+.lista .box-elementos .elementos {
   /* border: 0.1rem solid black; */
   display: grid;
   column-gap: 1.5rem;
-  grid-template-columns: auto auto auto auto;
+  /* grid-template-columns: auto auto auto auto; */
+  grid-template-areas: "A" "B" "C" "D";
 }
 
-.lista .box-elementos .filtro, .elementos{
-  background-color: blue;
-  
-  }
-
-  .elementos span{
+.elementos span {
   display: inline-block;
   font-size: 1.8rem;
   background-color: yellowgreen;
   color: #555;
 }
 
-.lista .box-elementos .box-paciente,
-.lista .box-elementos .box-visita,
-.lista .box-elementos .box-dados,
-.lista .box-elementos .box-status{
-  border: 0.1rem solid black;
 
-  /* display: flex;
-  flex-direction: column;
-  padding: 1rem; */
-  /* gap: 1.5rem; */
-  background-color: aqua;
+
+/* Botão Voltar  */
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.8rem;
+}
+
+a:hover {
+  color: #687482;
 }

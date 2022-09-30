@@ -100,7 +100,7 @@ form input[type='checkbox'] {
   /* background-color: #666; */
   display: inline;
   flex-direction: row;
-  margin: 28px;
+  /* margin: 28px; */
 }
 
 .login {
@@ -122,18 +122,14 @@ form .fotoPaciente img {
 a {
   text-decoration: none;
   color: black;
+  font-size: 1.8rem;
 }
 
 a:hover {
-  background-color: #687482;
+  color: #687482;
 }
 
 .T100 .documentacao {
   display: grid;
   /* grid-template-areas:  */
-}
-
-form .T50 {
-  background-color: blue;
-  
 }
