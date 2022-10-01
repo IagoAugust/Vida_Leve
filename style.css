@@ -7,11 +7,13 @@
 
 :root {
 
-  --icon-abas: hsl(214, 17%, 53%);
+  --icon-abas: #73849c;
 
-  --fundo-botao: hsl(0, 0%, 65%);
+  --fundo-botao: #a6a6a6;
 
-  --botao-hover: hsl(216, 29%, 86%);
+  --botao-hover: #d1d9e6;
+
+  --texto-secundario: #889;
 
   font-size: 62.5%;
   /* 1rem = 10px */
