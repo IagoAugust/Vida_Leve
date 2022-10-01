@@ -34,12 +34,20 @@ body {
 }
 
 
-a {
+.icone-voltar {
   text-decoration: none;
   color: black;
   font-size: 1.8rem;
+  margin-right: 4rem;
+  /* margin-top: .1rem; */
 }
 
-a:hover {
+.icone-voltar span{
+  position: relative;
+  top: .55rem;
+  left: .35rem;
+}
+
+.icone-voltar:hover {
   color: #687482;
 }
