@@ -1,43 +1,3 @@
-/* ------ Cabeçalho ------- */
-.container {
-  width: 100%;
-  height: 6.2rem;
-  background-color: #cbcdcf;
-
-  display: flex;
-  justify-content: space-between;
-}
-
-.container .nome-pagina {
-  display: flex;
-  padding: 1.2rem 2.4rem;
-}
-
-.container .nome-pagina p {
-  font-size: 1.8rem;
-  line-height: 2, 2rem;
-  margin: auto auto;
-}
-
-.perfil {
-  display: flex;
-  gap: 3.2rem;
-  padding: 1.2rem 2.4rem;
-}
-
-.perfil p {
-  margin: auto auto;
-  font-size: 1.8rem;
-  line-height: 2.2rem;
-}
-
-.perfil img {
-  width: 4.5rem;
-  height: 4.5rem;
-  border-radius: 50%;
-  margin-top: -0.5rem;
-  background-color: white;
-}
 
 /* ---------- Pesquisa ------------- */
 
@@ -166,6 +126,10 @@
  display: grid;
  grid-template-columns: 17% 83%;
   
+}
+
+.lista .box-elementos .elementos .box-paciente .paciente a{
+  text-decoration: none;  
 }
 
 

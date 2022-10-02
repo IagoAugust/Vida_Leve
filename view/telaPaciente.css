@@ -1,0 +1,41 @@
+body{
+  background-color:#e9b0b0;
+}
+/* Template */
+.template .menu {
+  grid-area: menu;
+}
+
+.template .cabecalho{
+  grid-area: cabecalho;
+}
+
+.template .sessao{
+  grid-area: sessao;
+}
+
+.template{
+  display: grid;
+  grid-template-areas: 
+  "menu cabecalho "
+  "menu sessao "
+  "menu sessao  ";
+
+  grid-template-columns: 12% 88%;
+
+  grid-template-rows: 10rem ;
+
+}
+
+.menu {
+  background-color: #fff;
+  height: 100vh;
+  width: 12%;
+  position: fixed;
+}
+
+.sessao{
+  background-color: #fff;
+  margin: 0 5rem 2rem;  
+  border: .5rem solid black;
+}
