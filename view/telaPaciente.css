@@ -1,5 +1,7 @@
+/* Template */
+
 body{
-  background-color:#e9b0b0;
+  background-color:#F2F2F2;
 }
 /* Template */
 .template .menu {
@@ -38,4 +40,70 @@ body{
   background-color: #fff;
   margin: 0 5rem 2rem;  
   border: .5rem solid black;
+}
+
+
+/* Menu */
+
+.menu .logo  {
+  
+  display: flex;
+  gap: 1.2rem;
+  margin: 2rem 0;
+  padding-right: 12%;
+  justify-content: center;
+}
+.menu .logo img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.menu .logo h2{
+  padding-top: 6%;
+  font-weight: 400;
+}
+
+.menu .topicos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 1.2rem;
+}
+
+.menu .topicos .icone {
+  border: .1rem solid #dfdbdb;
+  gap: 1rem;
+  display: flex;
+  margin-inline: 1.5rem;
+  height: 3.4rem;
+  padding-top: 2.5%;
+  padding-left: 1rem;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.icone svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.icone h3{
+  padding-top: 2%;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+
+.menu .topicos .icone-selecionado{
+  background-color: #EFF6FF;
+  border-color: #b7c8c866;
+}
+
+.menu .topicos .icone-selecionado svg path{
+  fill: var(--texto-selecionado);
+}
+
+.menu .topicos .icone-selecionado h3{
+  color: var(--texto-selecionado);
 }
