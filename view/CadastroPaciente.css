@@ -9,6 +9,8 @@
   font-size: 3rem;
   text-align: center;
   margin-bottom: 1rem;
+  font-size: 5rem;
+  
 }
 
 .login input {
@@ -41,8 +43,8 @@
 }
 
 .login button {
-  width: 36.9rem;
-  height: 6.2rem;
+  width: 40rem;
+  height: 8rem;
   background: #324054;
   border-radius: 9px;
   border: none;
@@ -52,6 +54,7 @@
   color: #fff;
   font-size: 2.5rem;
   cursor: pointer;
+  font-size: 3rem;
 }
 
 .login button:hover {
@@ -86,21 +89,35 @@ form input[type='checkbox'] {
 }
 
 .login .informacao .T100 input {
-  width: 55.5rem;
+  width: 120rem;
+  height: 6rem;
+}
+
+.login .T100 input{
+    font-size: 3rem;
+}
+
+.login .T50 input{
+  height: 6rem ;
 }
 
 .login .informacao .T50 {
   display: grid;
   grid-template-areas: 'a b';
-  margin: auto 30rem;
+  margin: auto 10rem;
 }
 
 .login .T50 input {
-  width: 25rem;
+  width: 49rem;
   /* background-color: #666; */
   display: inline;
   flex-direction: row;
   /* margin: 28px; */
+  font-size: 3rem;
+}
+
+.login .T100 .documentacao input{
+  height:6rem ;
 }
 
 .login {
