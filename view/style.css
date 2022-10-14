@@ -6,7 +6,6 @@
 }
 
 :root {
-
   --icon-abas: #73849c;
 
   --fundo-botao: #a6a6a6;
@@ -17,8 +16,7 @@
 
   --texto-selecionado: #2d68fe;
 
-  font-size: 62.5%;
-  /* 1rem = 10px */
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
 @font-face {
@@ -30,13 +28,12 @@ html,
 body {
   width: 100%;
   height: 100%;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter' sans-serif;
 }
 
 .clear {
   clear: both;
 }
-
 
 .icone-voltar {
   text-decoration: none;
@@ -46,16 +43,15 @@ body {
   /* margin-top: .1rem; */
 }
 
-.icone-voltar span{
+.icone-voltar span {
   position: relative;
-  top: .55rem;
-  left: .35rem;
+  top: 0.55rem;
+  left: 0.35rem;
 }
 
 .icone-voltar:hover {
   color: #687482;
 }
-
 
 /* ------ Cabeçalho ------- */
 .container {
@@ -97,8 +93,3 @@ body {
   margin-top: -0.5rem;
   background-color: white;
 }
-
-
-
-
-

@@ -1,52 +1,49 @@
 /* Template */
 
-body{
-  background-color:#F2F2F2;
+body {
+  background-color: #f2f2f2;
 }
 /* Template */
 .template .menu {
   grid-area: menu;
 }
 
-.template .cabecalho{
+.template .cabecalho {
   grid-area: cabecalho;
 }
 
-.template .sessao{
+.template .sessao {
   grid-area: sessao;
 }
 
-.template{
+.template {
   display: grid;
-  grid-template-areas: 
-  "menu cabecalho "
-  "menu sessao "
-  "menu sessao  ";
+  grid-template-areas:
+    'menu cabecalho '
+    'menu sessao '
+    'menu sessao  ';
 
   grid-template-columns: 12% 88%;
 
-  grid-template-rows: 10rem ;
-
+  grid-template-rows: 10rem;
 }
 
 .menu {
   background-color: #fff;
-  height: 100vh;
+  height: 100%;
   width: 12%;
   position: fixed;
 }
 
-.sessao{
+.sessao {
   background-color: #fff;
-  margin: 0 5rem 2rem;  
-  border: .5rem solid black;
+  margin: 0 5rem 2rem;
+  border: 0.2rem solid black;
 }
-
 
 /* Menu */
 
-.menu .logo  {
-  
+.menu .logo {
   display: flex;
   gap: 1.2rem;
   margin: 2rem 0;
@@ -58,7 +55,7 @@ body{
   height: 4rem;
 }
 
-.menu .logo h2{
+.menu .logo h2 {
   padding-top: 6%;
   font-weight: 400;
 }
@@ -66,13 +63,15 @@ body{
 .menu .topicos {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin-top: 3rem;
   text-align: center;
   gap: 1.2rem;
+  height: 100%;
+  /* background-color: #373f36; */
 }
 
 .menu .topicos .icone {
-  border: .1rem solid #dfdbdb;
+  border: 0.1rem solid #dfdbdb;
   gap: 1rem;
   display: flex;
   margin-inline: 1.5rem;
@@ -88,22 +87,142 @@ body{
   height: 2.5rem;
 }
 
-.icone h3{
+.icone h3 {
   padding-top: 2%;
   font-weight: 400;
   font-size: 1.4rem;
 }
 
-
-.menu .topicos .icone-selecionado{
-  background-color: #EFF6FF;
+.menu .topicos .icone-selecionado {
+  background-color: #eff6ff;
   border-color: #b7c8c866;
 }
 
-.menu .topicos .icone-selecionado svg path{
+.menu .topicos .icone-selecionado svg path {
   fill: var(--texto-selecionado);
 }
 
-.menu .topicos .icone-selecionado h3{
+.menu .topicos .icone-selecionado h3 {
   color: var(--texto-selecionado);
+}
+
+.menu .topicos footer {
+  /* background-color: #15f101; */
+  margin-top: 100%;
+  /* height: 8rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+/* Sessao */
+
+.sessao .pacienteStatus .cabecalho {
+  display: flex;
+  gap: 1.1rem;
+  margin-bottom: 2.271rem;
+  padding: 3.9rem 3.2rem;
+}
+
+.sessao .pacienteStatus .cabecalho img {
+  width: 8.929rem;
+  height: 8.929rem;
+  border: 0.1rem solid black;
+  border-radius: 10rem;
+}
+
+.sessao .pacienteStatus .cabecalho h3 {
+  font-weight: 500;
+  font-size: 3.3rem;
+  line-height: 4rem;
+  text-align: center;
+}
+
+.sessao .pacienteStatus .cabecalho .statusAtivo,
+.sessao .pacienteStatus .cabecalho .statusNegativo,
+.sessao .pacienteStatus .cabecalho .statusInativo {
+  width: 16.15px;
+  height: 15.2px;
+  border-radius: 15rem;
+}
+.sessao .pacienteStatus .cabecalho .statusAtivo {
+  background: #15f101;
+}
+
+.sessao .pacienteStatus .cabecalho .statusNegativo {
+  background: #f03738;
+}
+
+.sessao .pacienteStatus .cabecalho .statusInativo {
+  background: #ebeaea;
+}
+
+.sessao .pacienteStatus .cabecalho .status {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.sessao .pacienteStatus .cabecalho p {
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+  color: #6a6969;
+  margin-left: 0.5rem;
+}
+
+.sessao .pacienteStatus .cabecalho span {
+  color: #1b1919;
+}
+
+.sessao .menuInformacao {
+  /* background-color: #faf; */
+  display: flex;
+  gap: 2.5rem;
+  padding-left: 13.5rem;
+  border-bottom: 0.1rem solid #200;
+  margin-bottom: 5rem;
+}
+
+.sessao .menuInformacao p {
+  font-size: 18px;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.sessao .menuInformacao .selecionado {
+  color: var(--texto-selecionado);
+}
+
+/* sessao Container principal */
+
+.sessao #containerPrincipal {
+  display: none;
+  /* background-color: #98e091; */
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: 0 auto 2.5rem;
+
+  /* flex-direction: column; */
+}
+
+.sessao #containerPrincipal .descricao {
+  /* background-color: #c58686; */
+  margin-bottom: 2.1rem;
+  border: 0.1rem solid rebeccapurple;
+}
+
+.sessao #containerPrincipal .w100 {
+  flex-basis: 100%;
+  /* width: auto; */
+}
+
+.sessao #containerPrincipal .w50 {
+  flex-basis: 50%;
+  /* width: auto; */
+}
+
+.sessao #containerPrincipal .descricao h3 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
 }
