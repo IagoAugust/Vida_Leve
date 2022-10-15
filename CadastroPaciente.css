@@ -79,6 +79,7 @@ form input[type='checkbox'] {
   top: 3rem;
   left: 2rem;
 }
+
 .login .informacao .T100 {
   display: grid;
   grid-template-columns: auto;
@@ -123,4 +124,9 @@ form .fotoPaciente img {
 .T100 .documentacao {
   display: grid;
   /* grid-template-areas:  */
+}
+
+
+.endereco input {
+  display: grid;
 }
