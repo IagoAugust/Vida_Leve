@@ -11,6 +11,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
   </head>
   <body>
     <section class="template">
@@ -234,7 +236,7 @@
         </div>
         <!-- topicos -->
       </sidenav>
-      <main class="sessao">
+      <div class="sessao">
         <div class="pacienteStatus">
           <div class="cabecalho">
             <div>
@@ -252,32 +254,31 @@
           <div class="menuInformacao">
             <p
               id="principal"
-              class="selecionado"
-              onclick="mudarItemSelecionadoPrincipal()"
+              class="informacao selecionado"
+              
             >
               Principal
             </p>
-            <p id="anamnese" onclick="mudarItemSelecionadoAnamnese()">
+            <p id="anamnese" class="informacao" >
               Anamnese
             </p>
-            <p id="evolucao" onclick="mudarItemSelecionadoEvolucao()">
+            <p id="evolucao" class="informacao" >
               Evolução Multidisciplinar
             </p>
-            <p id="consulta" onclick="mudarItemSelecionadoConsulta()">
+            <p id="consulta" class="informacao" >
               Consulta
             </p>
           </div>
-        </div>
-        <!--pacienteStatus-->
+        </div><!--pacienteStatus-->
 
-        <div id="containerPrincipal">
+        <div id="container-principal" class="abaConteudo sessaoConteudo abaSelecionado  ">
           <div class="descricao w100">
             <h3>Nome:</h3>
             <div><p>Logan Henderson</p></div>
           </div>
           <div class="descricao w50">
             <h3>Idade:</h3>
-            <div><p>27 Anos</p></div>
+            <div><p>19 Anos</p></div>
           </div>
           <div class="descricao w50">
             <h3>Data de Nascimento:</h3>
@@ -299,9 +300,161 @@
             <h3>Profissão:</h3>
             <div><p>Arquiteto</p></div>
           </div>
-        </div>
-      </main>
-      <!--sessao-->
+        </div><!--containerPrincipal-->
+
+        <div id="container-anamnese" class="abaConteudo sessaoConteudo  ">
+          <div class="descricao w50">
+            <h3>Hábitos:</h3>
+            <div><p></p></div>
+          </div>
+          <div class="descricao w50">
+            <h3>Frequência Cardíaca</h3>
+            <div><p></p></div>
+          </div>
+          <div class="descricao w50">
+            <h3>Pressão arterial</h3>
+            <div><p></p></div>
+          </div>
+          <div class="descricao w50">
+            <h3>Pulso</h3>
+            <div><p></p></div>
+          </div>
+          <div class="descricao w50">
+            <h3>Temperatura</h3>
+            <div><p></p></div>
+          </div>
+          <div class="descricao w50">
+            <h3>Glicemia Capilar</h3>
+            <div><p></p></div>
+          </div>
+          <div class="descricao w50">
+            <h3>Saturação</h3>
+            <div><p></p></div>
+          </div>
+          <div class="descricao w50">
+            <h3>Frequência Respiratória</h3>
+            <div><p></p></div>
+          </div>
+          <div class="descricao w100">
+            <h3>Possui alguma dor</h3>
+            <div><p>Sim, Na area inferior no estomago</p></div>
+          </div>
+        </div><!--containerAnanese-->
+
+        <div id="container-evolucao" class="abaConteudo sessaoEvolucao  ">
+          <div class=" buscar">
+            <div>
+              <div class=" cardPesquisa ">
+                <div class="pesquisa">
+                  <h3>Área</h3>
+                    <select class="select" name="select">
+                      <option value="valor1">Valor 1</option>
+                      <option value="valor2" selected>Ed. Física</option>
+                      <option value="valor3">Valor 3</option>
+                    </select>
+                  </div>
+                  <div class="pesquisa">
+                    <h3>Data</h3>
+                  <input class="select" type="date" />
+                </div>
+              </div>
+              <div class="novaObservacao">
+                <div id="evolucaoadicionar" class="adicionar" ><p>Nova Observação</p><span class="material-symbols-outlined">add_circle </span></div>
+              </div>
+            </div>
+            <div class="cardObservacao">
+              <div class="card">
+                <div class="topico">
+                  <h3>Tópicos:</h3>
+                  <p>Exercícios</p>
+                </div><!--topico-->
+                <div class="data">
+                  <h3>Data:</h3>
+                  <p>09/09/2022</p>
+                </div><!--data-->
+                <div class="area">
+                  <h3>Área:</h3>
+                  <p>Educação</p>
+                </div><!--area-->
+                <div class="profissional">
+                  <h3>Profissional:</h3>
+                  <p>Prof. Bagulho</p>	
+                </div><!--profissional-->
+                <div class="observacao">
+                  <h3>Observação</h3>
+                  <ul>
+                    <li>AGACHAMENTO Repetições: 2 séries de 15 repetições, com o intervalo de 30 segundos entre cada série.</li>
+                    <li>PONTE PÉLVICA Repetições: Faça este exercício 4 vezes e o máximo de repetições que conseguir durante 30 segundos.
+                      Entre cada série descanse 15 segundos.</li>
+                  </ul>
+                </div><!--observacao-->
+              </div><!-- card-->
+
+              <div class="card">
+                <div class="topico">
+                  <h3>Tópicos:</h3>
+                  <p>Exercícios</p>
+                </div><!--topico-->
+                <div class="data">
+                  <h3>Data:</h3>
+                  <p>09/09/2022</p>
+                </div><!--data-->
+                <div class="area">
+                  <h3>Área:</h3>
+                  <p>Educação</p>
+                </div><!--area-->
+                <div class="profissional">
+                  <h3>Profissional:</h3>
+                  <p>Prof. Bagulho</p>	
+                </div><!--profissional-->
+                <div class="observacao">
+                  <h3>Observação</h3>
+                  <ul>
+                    <li>AGACHAMENTO Repetições: 2 séries de 15 repetições, com o intervalo de 30 segundos entre cada série.</li>
+                    <li>PONTE PÉLVICA Repetições: Faça este exercício 4 vezes e o máximo de repetições que conseguir durante 30 segundos.
+                      Entre cada série descanse 15 segundos.</li>
+                  </ul>
+                </div><!--observacao-->
+              </div><!-- card-->
+
+            </div><!-- cardObservacao-->
+          </div> <!--buscar-->
+        </div><!--containerEvolucao-->
+
+        <div id="container-evolucaoadicionar" class="abaConteudo sessaoEvolucaoAdicionar abaSelecionado ">
+          <form class="sessaoConteudo" action="">
+            <div class="descricao w100">
+              <h3>Tópico:</h3>
+                <input type="text" placeholder="Digite o titulo da Observação" >
+            </div>
+
+            <div class="descricao w50">
+              <h3>Data</h3>
+                <input type="date"  >
+            </div>
+
+            <div class="descricao w50">
+              <h3>Área:</h3>
+                <input type="text" placeholder="Digite a área de atuação" >
+            </div>
+            
+            <div class="observacao descricao w100">
+              <h3>Observação:</h3>
+                <textarea placeholder="Digite a área de atuação" ></textarea>
+            </div>
+            
+            <div class="descricao w100">
+              <h3>Privacidade (Dados Sensíveis que outras áreas não poderão Consultar)</h3>
+              <input type="checkbox" nome="switch" id="switch" >
+            </div>
+
+            <div class="descricao w100 btnSalva ">
+              <button>Salvar</button>
+            </div>
+          </form>
+        </div><!--containerEvoulcaoAdiconar-->
+
+      </div><!--sessao-->
     </section>
     <script src="paciente.js"></script>
   </body>

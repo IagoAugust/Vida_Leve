@@ -1,29 +1,40 @@
-object.addEventListener('click', myScript)
+const informacao = (document.querySelectorAll('.informacao'));
 
-function mudarItemSelecionadoPrincipal() {
-  document.getElementById('principal').classList.add('selecionado')
-  document.getElementById('anamnese').classList.remove('selecionado')
-  document.getElementById('evolucao').classList.remove('selecionado')
-  document.getElementById('consulta').classList.remove('selecionado')
-}
+informacao.forEach( aba => {
+  aba.addEventListener('click', () => {
 
-function mudarItemSelecionadoAnamnese() {
-  document.getElementById('anamnese').classList.add('selecionado')
-  document.getElementById('principal').classList.remove('selecionado')
-  document.getElementById('evolucao').classList.remove('selecionado')
-  document.getElementById('consulta').classList.remove('selecionado')
-}
+    if(aba.classList.contains('selecionado')){
+      return;
+    }
+    
+    const informacaoSelecionado = document.querySelector('.informacao.selecionado');
+    informacaoSelecionado.classList.remove('selecionado');
+    aba.classList.add('selecionado');
 
-function mudarItemSelecionadoEvolucao() {
-  document.getElementById('evolucao').classList.add('selecionado')
-  document.getElementById('anamnese').classList.remove('selecionado')
-  document.getElementById('principal').classList.remove('selecionado')
-  document.getElementById('consulta').classList.remove('selecionado')
-}
 
-function mudarItemSelecionadoConsulta() {
-  document.getElementById('consulta').classList.add('selecionado')
-  document.getElementById('anamnese').classList.remove('selecionado')
-  document.getElementById('principal').classList.remove('selecionado')
-  document.getElementById('evolucao').classList.remove('selecionado')
-}
+    const sessaoSelecionado = document.querySelector('.abaConteudo.abaSelecionado');
+    sessaoSelecionado.classList.remove('abaSelecionado');
+    
+
+    const idContainerSessaoaba = `container-${aba.id}`;
+    const conteudoASerMostrado = document.getElementById(idContainerSessaoaba);
+    conteudoASerMostrado.classList.add('abaSelecionado');
+
+    
+
+    
+  });
+});
+
+
+const botaoAdicionar = document.querySelector('.adicionar');
+botaoAdicionar.addEventListener('click', () => {
+
+  const sessaoSelecionado = document.querySelector('.abaConteudo.abaSelecionado');
+  sessaoSelecionado.classList.remove('abaSelecionado');
+
+  const idContainerAdiconarNovo = `container-${botaoAdicionar.id}`;
+  console.log(idContainerAdiconarNovo);
+  const conteudoASerMostrado = document.getElementById(idContainerAdiconarNovo);
+  conteudoASerMostrado.classList.add('abaSelecionado');
+  })

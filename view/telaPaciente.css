@@ -171,7 +171,6 @@ body {
 }
 
 .sessao .menuInformacao {
-  /* background-color: #faf; */
   display: flex;
   gap: 2.5rem;
   padding-left: 13.5rem;
@@ -189,39 +188,265 @@ body {
   color: var(--texto-selecionado);
 }
 
-/* sessao Container principal */
 
-.sessao #containerPrincipal {
-  display: none;
-  /* background-color: #98e091; */
+
+/* Sessao cards padrao */
+
+.sessao .w100 {
+  flex-basis: 100%;
+  padding-inline: 5rem;
+}
+
+.sessao .w50 {
+  flex-basis: 50%;
+  padding-inline: 5rem;
+}
+
+/* sessaoConteudo */
+
+
+
+.sessao .sessaoConteudo {
   display: flex;
   flex-wrap: wrap;
   width: 95%;
   margin: 0 auto 2.5rem;
-
-  /* flex-direction: column; */
 }
 
-.sessao #containerPrincipal .descricao {
-  /* background-color: #c58686; */
+
+
+.sessao .sessaoConteudo .descricao {
   margin-bottom: 2.1rem;
-  border: 0.1rem solid rebeccapurple;
 }
 
-.sessao #containerPrincipal .w100 {
-  flex-basis: 100%;
-  /* width: auto; */
-}
 
-.sessao #containerPrincipal .w50 {
-  flex-basis: 50%;
-  /* width: auto; */
-}
 
-.sessao #containerPrincipal .descricao h3 {
-  font-weight: 400;
+.sessao .sessaoConteudo .descricao h3 {
+  font-weight: 600;
   font-size: 1.8rem;
   line-height: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sessao .sessaoConteudo .descricao div,
+.sessao .sessaoConteudo .descricao input{
+  width: 100%;
+  height: 3.1rem;
+  display: flex;
+  align-items: center;
+  border: .1rem solid #4d4d4d8a;
+  margin-left: .5rem;
+}
+
+.sessao .sessaoConteudo .descricao p,
+.sessao .sessaoConteudo .descricao input,
+.sessao .sessaoConteudo .descricao textarea {
+  font-size: 1.8rem;
+  padding-left: 1rem;
 }
 
 
+
+
+
+/* sessao Evolucao */
+
+.sessao .sessaoEvolucao .buscar{
+  width: 95%;
+  border: .1rem solid #EDEDED;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin: 0 auto 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.sessao .sessaoEvolucao .buscar>div{
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
+.sessao .sessaoEvolucao .cardPesquisa{
+  display: flex;
+  gap: 8rem;
+  
+  margin-top: 2.1rem;
+  margin-left: 6rem;
+
+}
+
+.sessao .sessaoEvolucao .cardPesquisa .pesquisa{
+  width: 15.5rem;
+  height: 6.2rem;
+  text-align: center;
+}
+
+.sessao .sessaoEvolucao .cardPesquisa .pesquisa h3{
+  margin-bottom: 1.3rem;
+  font-weight: 500;
+  font-size: 1.7461rem;  
+}
+
+.sessao .sessaoEvolucao .cardPesquisa .pesquisa .select{
+  width: 100%;
+  height: 2.7rem;
+  border-radius: 5rem;
+  border: .1rem solid #989696;
+}
+
+.sessao .sessaoEvolucao .novaObservacao{
+  display: flex;
+  align-items: center;
+  margin-right: 6.2rem;
+  margin-top: 2.1rem;
+  cursor: pointer;
+}
+
+.sessao .sessaoEvolucao .adicionar {
+  display: flex;
+  gap: 1rem;
+  height: 2rem;
+  padding: 1.5rem;
+  align-items: center;
+
+  border: .1rem solid #211;
+  border-radius: 5em;
+  
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 22px;
+  text-decoration: none;
+  color: #211;
+}
+
+
+.sessao .sessaoEvolucao .cardObservacao{
+  width: 92%;
+  margin:  4.7rem auto ;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.sessao .sessaoEvolucao .card{
+  border: .1px solid #CBC5C5;
+  border-radius: 1.5rem;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+}
+
+.sessao .sessaoEvolucao .card h3 {
+  font-size: 1.5rem;
+  line-height: 22px;
+}
+
+.sessao .sessaoEvolucao .card p {
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}
+
+.sessao .sessaoEvolucao .card li {
+  font-size: 1.3rem;
+  margin-left: 2.5rem;
+  margin-bottom: .4rem;
+  
+}
+
+/* sessao evolucao adiciona */
+
+.sessaoEvolucaoAdicionar .observacao textarea {
+  width: 100%;
+  height: 10.9rem;
+  display: flex;
+  align-items: center;
+  border: .1rem solid #4d4d4d8a;
+  margin-left: .5rem;
+  resize: none;
+}
+
+.sessaoEvolucaoAdicionar .descricao input[type="checkbox"]{
+  margin: 1rem 2rem;
+  appearance: none;
+  width: 9rem;
+  height: 3.5rem;
+  background-color: #707070;
+  border-radius: 5rem; 
+  position: absolute;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.sessaoEvolucaoAdicionar .descricao input[type="checkbox"]::before{
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  background-color: #d6d6d6;
+  border-radius: 50%;
+  left:.3rem;
+  top: .1rem;
+  transition: .3s;
+}
+
+.sessaoEvolucaoAdicionar .descricao input[type="checkbox"]::after{
+  content: "OFF";
+  position: absolute;
+  color: #c2c0c0;
+  font-size: 1.8rem;
+  left: 4rem;
+  top: .6rem;
+  transition:.3s;
+}
+
+.sessaoEvolucaoAdicionar .descricao input[type="checkbox"]:checked{
+  background: #8ffd85;
+}
+
+.sessaoEvolucaoAdicionar .descricao input[type="checkbox"]:checked::before{
+  background: #000;
+  left: 5.6rem;
+}
+
+.sessaoEvolucaoAdicionar .descricao input[type="checkbox"]:checked::after{
+  content: "ON";
+  color: #000;
+  left: 1.3rem;
+}
+
+.sessaoEvolucaoAdicionar .btnSalva {
+  /* background-color: #15f101; */
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.sessaoEvolucaoAdicionar .descricao button{
+  
+  padding: 1.2rem 3.6rem;
+  background: #A5A5A5;
+  border: 1px solid #615656;
+  border-radius: 15px;
+  color: #000000bc;
+}
+
+
+
+
+
+
+
+
+
+
+
+.sessao .abaConteudo {
+  display: none;
+}
+/* 
+.sessao .abaSemConteudo{
+  display: none;
+} */
+
+.sessao .abaSelecionado{
+  display: flex;
+}
