@@ -1,5 +1,4 @@
 const informacao = (document.querySelectorAll('.informacao'));
-
 informacao.forEach( aba => {
   aba.addEventListener('click', () => {
 
@@ -20,9 +19,6 @@ informacao.forEach( aba => {
     const conteudoASerMostrado = document.getElementById(idContainerSessaoaba);
     conteudoASerMostrado.classList.add('abaSelecionado');
 
-    
-
-    
   });
 });
 
