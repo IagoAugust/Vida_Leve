@@ -67,7 +67,7 @@ body {
   height: 89.9vh;
 }
 
-.menu .topicos>div {
+.menu .topicos > div {
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
@@ -138,8 +138,8 @@ body {
 .sessao .pacienteStatus .cabecalho .statusAtivo,
 .sessao .pacienteStatus .cabecalho .statusNegativo,
 .sessao .pacienteStatus .cabecalho .statusInativo {
-  width: 16.15px;
-  height: 15.2px;
+  width: 1.615rem;
+  height: 1.52rem;
   border-radius: 15rem;
 }
 .sessao .pacienteStatus .cabecalho .statusAtivo {
@@ -175,20 +175,18 @@ body {
   gap: 2.5rem;
   padding-left: 13.5rem;
   border-bottom: 0.1rem solid #200;
-  margin-bottom: 5rem;
+  margin-bottom: 3.6rem;
 }
 
 .sessao .menuInformacao p {
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
   cursor: pointer;
 }
 
 .sessao .menuInformacao .selecionado {
   color: var(--texto-selecionado);
 }
-
-
 
 /* Sessao cards padrao */
 
@@ -204,8 +202,6 @@ body {
 
 /* sessaoConteudo */
 
-
-
 .sessao .sessaoConteudo {
   display: flex;
   flex-wrap: wrap;
@@ -213,13 +209,9 @@ body {
   margin: 0 auto 2.5rem;
 }
 
-
-
 .sessao .sessaoConteudo .descricao {
   margin-bottom: 2.1rem;
 }
-
-
 
 .sessao .sessaoConteudo .descricao h3 {
   font-weight: 600;
@@ -229,70 +221,64 @@ body {
 }
 
 .sessao .sessaoConteudo .descricao div,
-.sessao .sessaoConteudo .descricao input{
+.sessao .sessaoConteudo .descricao input {
   width: 100%;
   height: 3.1rem;
   display: flex;
   align-items: center;
-  border: .1rem solid #4d4d4d8a;
-  margin-left: .5rem;
+  border: 0.1rem solid #4d4d4d8a;
+  margin-left: 0.5rem;
 }
 
 .sessao .sessaoConteudo .descricao p,
 .sessao .sessaoConteudo .descricao input,
 .sessao .sessaoConteudo .descricao textarea {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   padding-left: 1rem;
 }
 
-
-
-
-
 /* sessao Evolucao */
 
-.sessao .sessaoEvolucao .buscar{
+.sessao .sessaoEvolucao .buscar {
   width: 95%;
-  border: .1rem solid #EDEDED;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border: 0.3rem solid #ededed;
   margin: 0 auto 2.5rem;
   padding-bottom: 3rem;
 }
 
-.sessao .sessaoEvolucao .buscar>div{
+.sessao .sessaoEvolucao .buscar > div {
   justify-content: space-between;
   display: flex;
   flex-wrap: wrap;
 }
-.sessao .sessaoEvolucao .cardPesquisa{
+.sessao .sessaoEvolucao .cardPesquisa {
   display: flex;
   gap: 8rem;
-  
+
   margin-top: 2.1rem;
   margin-left: 6rem;
-
 }
 
-.sessao .sessaoEvolucao .cardPesquisa .pesquisa{
+.sessao .sessaoEvolucao .cardPesquisa .pesquisa {
   width: 15.5rem;
   height: 6.2rem;
   text-align: center;
 }
 
-.sessao .sessaoEvolucao .cardPesquisa .pesquisa h3{
+.sessao .sessaoEvolucao .cardPesquisa .pesquisa>h3{
   margin-bottom: 1.3rem;
   font-weight: 500;
-  font-size: 1.7461rem;  
+  font-size: 1.7rem;
 }
 
-.sessao .sessaoEvolucao .cardPesquisa .pesquisa .select{
+.sessao .sessaoEvolucao .cardPesquisa .pesquisa .select {
   width: 100%;
   height: 2.7rem;
   border-radius: 5rem;
-  border: .1rem solid #989696;
+  border: 0.1rem solid #989696;
 }
 
-.sessao .sessaoEvolucao .novaObservacao{
+.sessao .abaConteudo .novaObservacao {
   display: flex;
   align-items: center;
   margin-right: 6.2rem;
@@ -300,36 +286,35 @@ body {
   cursor: pointer;
 }
 
-.sessao .sessaoEvolucao .adicionar {
+.sessao .abaConteudo .adicionar {
   display: flex;
   gap: 1rem;
   height: 2rem;
   padding: 1.5rem;
   align-items: center;
 
-  border: .1rem solid #211;
+  border: 0.1rem solid #211;
   border-radius: 5em;
-  
+
   font-weight: 400;
   font-size: 1.5rem;
-  line-height: 22px;
+  line-height: 2.2rem;
   text-decoration: none;
   color: #211;
 }
 
-
-.sessao .sessaoEvolucao .cardObservacao{
+.sessao .sessaoEvolucao .cardObservacao {
   width: 92%;
-  margin:  4.7rem auto ;
+  margin: 4.7rem auto;
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
 }
 
-.sessao .sessaoEvolucao .card{
-  border: .1px solid #CBC5C5;
+.sessao .sessaoEvolucao .card {
+  border: 0.1rem solid #cbc5c5;
   border-radius: 1.5rem;
-  
+
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -337,20 +322,19 @@ body {
 }
 
 .sessao .sessaoEvolucao .card h3 {
-  font-size: 1.5rem;
-  line-height: 22px;
+  font-size: 1.7rem;
+  line-height: 2.2rem;
 }
 
 .sessao .sessaoEvolucao .card p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin-left: 1rem;
 }
 
 .sessao .sessaoEvolucao .card li {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin-left: 2.5rem;
-  margin-bottom: .4rem;
-  
+  margin-bottom: 0.4rem;
 }
 
 /* sessao evolucao adiciona */
@@ -360,56 +344,56 @@ body {
   height: 10.9rem;
   display: flex;
   align-items: center;
-  border: .1rem solid #4d4d4d8a;
-  margin-left: .5rem;
+  border: 0.1rem solid #4d4d4d8a;
+  margin-left: 0.5rem;
   resize: none;
 }
 
-.sessaoEvolucaoAdicionar .descricao input[type="checkbox"]{
+.sessaoEvolucaoAdicionar .descricao input[type='checkbox'] {
   margin: 1rem 2rem;
   appearance: none;
   width: 9rem;
   height: 3.5rem;
   background-color: #707070;
-  border-radius: 5rem; 
+  border-radius: 5rem;
   position: absolute;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-.sessaoEvolucaoAdicionar .descricao input[type="checkbox"]::before{
-  content: "";
+.sessaoEvolucaoAdicionar .descricao input[type='checkbox']::before {
+  content: '';
   position: absolute;
   width: 3rem;
   height: 3rem;
   background-color: #d6d6d6;
   border-radius: 50%;
-  left:.3rem;
-  top: .1rem;
-  transition: .3s;
+  left: 0.3rem;
+  top: 0.1rem;
+  transition: 0.3s;
 }
 
-.sessaoEvolucaoAdicionar .descricao input[type="checkbox"]::after{
-  content: "OFF";
+.sessaoEvolucaoAdicionar .descricao input[type='checkbox']::after {
+  content: 'OFF';
   position: absolute;
   color: #c2c0c0;
   font-size: 1.8rem;
   left: 4rem;
-  top: .6rem;
-  transition:.3s;
+  top: 0.6rem;
+  transition: 0.3s;
 }
 
-.sessaoEvolucaoAdicionar .descricao input[type="checkbox"]:checked{
+.sessaoEvolucaoAdicionar .descricao input[type='checkbox']:checked {
   background: #8ffd85;
 }
 
-.sessaoEvolucaoAdicionar .descricao input[type="checkbox"]:checked::before{
+.sessaoEvolucaoAdicionar .descricao input[type='checkbox']:checked::before {
   background: #000;
   left: 5.6rem;
 }
 
-.sessaoEvolucaoAdicionar .descricao input[type="checkbox"]:checked::after{
-  content: "ON";
+.sessaoEvolucaoAdicionar .descricao input[type='checkbox']:checked::after {
+  content: 'ON';
   color: #000;
   left: 1.3rem;
 }
@@ -420,16 +404,42 @@ body {
   flex-direction: row-reverse;
 }
 
-.sessaoEvolucaoAdicionar .descricao button{
-  
+.sessaoEvolucaoAdicionar .descricao button {
   padding: 1.2rem 3.6rem;
-  background: #A5A5A5;
-  border: 1px solid #615656;
-  border-radius: 15px;
+  background: #a5a5a5;
+  border: .1rem solid #615656;
+  border-radius: 1.5rem;
   color: #000000bc;
 }
 
+/* abaConsulta */
 
+.abaConsulta .historico {
+  width: 95%;
+  border: 0.3rem solid #ededed;
+  padding-bottom: 3rem;
+}
+
+.abaConsulta .novaObservacao{
+  justify-content: right;
+  margin-bottom: 2rem;
+}
+
+.abaConsulta table caption h2{
+  font-size: 1.8rem;
+  /* margin-block: 1rem; */
+}
+
+.abaConsulta table{
+  /* border: .1rem solid #200; */
+  /* background-color: wheat; */
+  font-size: 1.8rem;
+}
+
+.abaConsulta table thead {
+  /* background-color: tomato; */
+  border: .1rem solid #35f;
+}
 
 
 
@@ -447,6 +457,6 @@ body {
   display: none;
 } */
 
-.sessao .abaSelecionado{
+.sessao .abaSelecionado {
   display: flex;
 }
