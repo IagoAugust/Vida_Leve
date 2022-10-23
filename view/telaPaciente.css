@@ -200,6 +200,21 @@ body {
   padding-inline: 5rem;
 }
 
+.sessao .w35 {
+  flex-basis: 35%;
+  padding-inline: 5rem;
+}
+
+.sessao .w30 {
+  flex-basis: 20%;
+  margin-inline: 2rem;
+}
+
+.sessao .w65{
+  flex-basis: 65%;
+  padding-inline: 5rem;
+}
+
 /* sessaoConteudo */
 
 .sessao .sessaoConteudo {
@@ -232,7 +247,8 @@ body {
 
 .sessao .sessaoConteudo .descricao p,
 .sessao .sessaoConteudo .descricao input,
-.sessao .sessaoConteudo .descricao textarea {
+.sessao .sessaoConteudo .descricao textarea,
+.sessao .sessaoConteudo .descricao label {
   font-size: 1.5rem;
   padding-left: 1rem;
 }
@@ -271,7 +287,8 @@ body {
   font-size: 1.7rem;
 }
 
-.sessao .sessaoEvolucao .cardPesquisa .pesquisa .select {
+.sessao .sessaoEvolucao .cardPesquisa .pesquisa .select, 
+.sessao .sessaoConteudo .select{
   width: 100%;
   height: 2.7rem;
   border-radius: 5rem;
@@ -339,7 +356,7 @@ body {
 
 /* sessao evolucao adiciona */
 
-.sessaoEvolucaoAdicionar .observacao textarea {
+.sessaoConteudo .observacao textarea {
   width: 100%;
   height: 10.9rem;
   display: flex;
@@ -398,18 +415,25 @@ body {
   left: 1.3rem;
 }
 
-.sessaoEvolucaoAdicionar .btnSalva {
-  /* background-color: #15f101; */
+.sessaoEvolucaoAdicionar .btnSalva,
+.sessaoConteudo .btnSalva {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.sessaoEvolucaoAdicionar .descricao button {
+.sessaoEvolucaoAdicionar .descricao button,
+.sessaoConteudo .descricao button {
   padding: 1.2rem 3.6rem;
   background: #a5a5a5;
   border: .1rem solid #615656;
   border-radius: 1.5rem;
   color: #000000bc;
+  cursor: pointer
+}
+
+.sessaoEvolucaoAdicionar .descricao button:hover,
+.sessaoConteudo .descricao button:hover {
+  background: #cdcbcb;
 }
 
 /* abaConsulta */
@@ -427,23 +451,232 @@ body {
 
 .abaConsulta table caption h2{
   font-size: 1.8rem;
-  /* margin-block: 1rem; */
 }
 
-.abaConsulta table{
-  /* border: .1rem solid #200; */
-  /* background-color: wheat; */
-  font-size: 1.8rem;
+.abaConsulta table {
+  width: 100%;
+  text-align: center;
+  border-collapse:separate;
+  border: solid #707070 1px;
+  border-radius: 10px;
+  margin-inline: 2rem;
+  padding-block: 1.6rem;
 }
 
-.abaConsulta table thead {
-  /* background-color: tomato; */
-  border: .1rem solid #35f;
+.abaConsulta table caption h2 {
+  font-size: 1.9rem;
+  margin-bottom:  3rem;
+}
+
+.abaConsulta table thead{
+  height: 3rem;
+}
+
+.abaConsulta table thead th {
+  border: 1px solid #707070;
+  font-size: 1.5rem;
+  color: #767575;
+  
+}
+
+.abaConsulta table tbody td {
+  border: .1rem solid #707070;
+  height: 2.5rem; 
+  font-size: 1.2rem;
+}
+
+.abaConsulta table tbody .status-conluido{
+  color: #29ce1a;
+}
+
+.abaConsulta table tbody .status-agendado{
+  color: #5045d4;
+}
+
+
+/* ConsultaAdicionar */
+
+.sessaoConsultaAdicionar>.sessaoConteudo {
+  justify-content: center;
+  gap: 5rem;
+}
+
+.sessaoConsultaAdicionar .calendario h2{
+  text-align: center;
+  font-size: 2rem;
+}
+
+.sessaoConsultaAdicionar .calendario .header-calendario {
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 
 
+.sessaoConsultaAdicionar .calendario h2 {
+  margin-top: 2rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  
+}
 
+.sessaoConsultaAdicionar .calendario .btn-ant,
+.sessaoConsultaAdicionar .calendario .btn-pro{
+  height: 3.2rem;
+  width: 3.2rem;
+  line-height: 3.2rem;
+  margin-top: .5rem;
+  border: .2rem solid #4c4f4f;
+  border-radius: .4rem;
+  color: #3e4040;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 3rem;
+  cursor: pointer;
+}
+
+.sessaoConsultaAdicionar .calendario .btn-ant:hover,
+.sessaoConsultaAdicionar .calendario .btn-pro:hover{
+  background: #b3b7b7;
+  border: .2rem solid #5f6161;
+  color: #171616;
+}
+
+.sessaoConsultaAdicionar .calendario table {
+  border-collapse: collapse;
+}
+
+.sessaoConsultaAdicionar .calendario table thead {
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: .2rem solid #747373;
+}
+
+.sessaoConsultaAdicionar .calendario table td{
+  /* border:  .1rem solid #4c4f4f ; */
+  width: 14.28rem;
+  height: 3rem;;
+  text-align: center;
+  color: #5d5b5b;
+}
+
+.sessaoConsultaAdicionar .calendario table tbody td{
+  cursor: pointer;
+}
+
+.sessaoConsultaAdicionar .calendario table tbody td:hover{
+  background-color: rgba(113, 189, 220, 0.638);
+  color: #000;
+  font-size: 1.45rem;
+}
+
+/* .sessaoConsultaAdicionar table tbody td:last-child{
+  border-right: .1rem solid #4c4f4f;
+}
+
+.sessaoConsultaAdicionar table tbody tr:last-child{
+  background-color: #00addf;
+  border-bottom: .1rem solid #4c4f4f;
+}
+
+.sessaoConsultaAdicionar table tbody td:first-child{
+  border-left: .1rem solid #4c4f4f;
+} */
+
+.sessaoConsultaAdicionar .calendario table .dia-atual {
+  background-color: #a7a5a5;
+  color: #fff;
+  font-size: 1.45rem;
+}
+
+
+.sessaoConsultaAdicionar .calendario table .mes-anterior, 
+.sessaoConsultaAdicionar .calendario table .proximo-mes{
+  color: #a3a5a5;
+  background-color: #d3dede4f;
+}
+
+.sessaoConsultaAdicionar .calendario table .mes-anterior:hover, 
+.sessaoConsultaAdicionar .calendario table .proximo-mes:hover{
+  color: #ffffff;
+  background-color: #b5b9b9c3;
+}
+
+.sessaoConsultaAdicionar .calendario table .evento {
+  width: auto;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sessaoConsultaAdicionar .calendario table .evento:after {
+  content: '';
+  width: .7rem;
+  height: .7rem;
+  margin: .3rem 0 0 0;
+  background-color: #00addf;
+  border-radius: 50%;
+}
+
+.sessaoConsultaAdicionar .calendario table .evento:hover:after{
+  background: #f9f9f9
+}
+
+.sessaoConsultaAdicionar .calendario table .dia-atual.evento:after{
+  background: #fff;
+}
+
+.sessaoConsultaAdicionar .calendario table .dia-atual.evento:hover:after{
+  background: #000;
+}
+
+.sessaoConsultaAdicionar .calendario .footer-calendario p{
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.sessaoConsultaAdicionar .calendario .footer-calendario span{
+  color: #0091df;
+  font-weight: bold;
+}
+
+.sessaoConsultaAdicionar .agendar-consulta{
+  border: .1rem solid ;
+}
+
+.sessaoConsultaAdicionar .agendar-consulta{
+  border-radius: 1.3rem;
+  padding-top: 2rem;
+}
+
+
+.sessaoConsultaAdicionar .agendar-consulta input[type="date"]::-webkit-inner-spin-button,
+.sessaoConsultaAdicionar .agendar-consulta input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+
+
+.sessaoConsultaAdicionar .agendar-consulta .notificacao{
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.sessaoConsultaAdicionar .notificacao input[type='radio']{
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #0091df;
+  margin-top: .5rem;  
+
+}
 
 
 

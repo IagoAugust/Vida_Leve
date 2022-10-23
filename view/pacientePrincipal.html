@@ -299,9 +299,13 @@
               <div class="pesquisa">
                 <h3>Área</h3>
                 <select class="select" name="select">
-                  <option value="valor1">Valor 1</option>
-                  <option value="valor2" selected>Ed. Física</option>
-                  <option value="valor3">Valor 3</option>
+                  <option value="enfermagem">Enfermagem</option>
+                  <option value="fisioterapia">Fisioterapia</option>
+                  <option value="biomedicina">Biomedicina</option>
+                  <option value="psicologia">Psicologia</option>
+                  <option value="farmacia">Farmácia</option>
+                  <option value="ed-fisica" selected>Ed. física</option> 
+                  <option value="nutricao">Nutrição</option>
                 </select>
               </div>
               <div class="pesquisa">
@@ -425,16 +429,18 @@
       <!--containerEvoulcaoAdiconar-->
 
 
-      <div id="container-consulta" class="abaConteudo abaConsulta abaSelecionado">
+      <div id="container-consulta" class="abaConteudo abaConsulta ">
         <div class="historico sessaoConteudo">
           <div class="novaObservacao w100 ">
             <div id="consultaadicionar" class="adicionar ">
               <p>Nova Agendamento</p><span class="material-symbols-outlined">add_circle </span>
             </div>
           </div>
-          
-          <table class="w100">
-            <caption><h2 class="">Histórico de Consulta</h2></caption>
+
+          <table class="w100" cellspacing="0">
+            <caption>
+              <h2>Histórico de Consulta</h2>
+            </caption>
             <thead>
               <th>Consulta</th>
               <th>Hora</th>
@@ -448,39 +454,162 @@
                 <td>08:30</td>
                 <td>Enfermagem</td>
                 <td>Prof. Bagulho</td>
-                <td>Concluído</td>
+                <td class="status-conluido">Concluído</td>
               </tr>
               <tr>
                 <td>09/011/2022</td>
                 <td>08:30</td>
                 <td>Ed. Física</td>
                 <td>Prof. Bagulho</td>
-                <td>Agendado</td>
+                <td class="status-agendado">Agendado</td>
               </tr>
+
+
           </table>
+
 
         </div>
 
       </div>
       <!--Containerconsulta-->
 
+      <div id="container-consultaadicionar" class="abaConteudo sessaoConsultaAdicionar abaSelecionado ">
+        <div class="sessaoConteudo">
+          <div class="calendario w35">
+            <h2 id="ano">2022</h2>
+            <div class="header-calendario">
+              <a class="btn-ant" id="btn_anterior"><</a>
+              <h2 id="mes">Outubro</h2>
+              <a class="btn-pro" id="btn_proximo">></a>
+            </div>
+
+            <table cellspacing="0">
+              <thead>
+                <tr>
+                  <td>Dom</td>
+                  <td>Seg</td>
+                  <td>Ter</td>
+                  <td>Qua</td>
+                  <td>Qui</td>
+                  <td>Sex</td>
+                  <td>Sab</td>
+                </tr>
+              </thead>
+              <tbody id="dias">
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td class="evento" >5</td>
+                  <td>6</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="footer-calendario">
+              <p>(OBS: Dias com bolinhas em <span>Azul</span> , são dias já agendados)</p>
+            </div>
+          </div>
+          <div class="agendar-consulta w50">
+            <form class="sessaoConteudo">
+              
+              <div class="descricao w50">
+                <label for="Dia">Dia</label>
+                <input type="date" name="Dia" >
+              </div>
+              
+              <div class="descricao w50">
+                <label for="horario">Horario</label>
+                <input type="time" name="horario" >
+              </div>
 
 
+              <div class="descricao w50">
+                <label for="area">Area</label>
+                <select class="select">
+                  <option value="enfermagem">Enfermagem</option>
+                  <option value="fisioterapia">Fisioterapia</option>
+                  <option value="biomedicina">Biomedicina</option>
+                  <option value="psicologia">Psicologia</option>
+                  <option value="farmacia">Farmácia</option>
+                  <option value="ed-fisica">Ed. física</option> 
+                  <option value="nutricao">Nutrição</option>
+                </select>
+              </div>
 
+              <div class="observacao descricao  w100">
+                <label for="descricao">Descrição</label>
+                <textarea name="descricao" ></textarea>
+              </div>
 
+              <div class="notificacao w100">
+                <h4>Selecione o meio de notificar o paciente:</h4>
+                <input type="radio" name="notificacao" value="telefone">
+                <label for="telefone">Telefone</label><br>
+                <input type="radio" name="notificacao" value="email">
+                <label for="email">E-mail</label>
+              </div>
 
-      <div id="container-consultaadicionar" class="abaConteudo sessaoEvolucaoAdicionar ">
-        <form class="sessaoConteudo" action="">
-          <h1>deu certo</h1>
-        </form>
+              <div class="descricao w100 btnSalva ">
+                <button>Salvar</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-      <!--containerconsultaadicionar-->
-
+      <!--sessaoConsultaAdicionar-->
 
     </div>
     <!--sessao-->
   </section>
   <script src="paciente.js"></script>
+  <script src="consulta.js"></script>
 </body>
 
 </html>
