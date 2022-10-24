@@ -86,6 +86,8 @@ body {
   padding-left: 1rem;
   cursor: pointer;
   border-radius: 1rem;
+  text-decoration: none;
+  color: #000;
 }
 
 .icone svg {
@@ -251,6 +253,14 @@ body {
 .sessao .sessaoConteudo .descricao label {
   font-size: 1.5rem;
   padding-left: 1rem;
+}
+
+.sessao .sessaoConteudo .descricao textarea{
+  padding-top: 1rem;
+}
+
+.sessao .sessaoConteudo .descricao textarea::placeholder{
+  margin-top: 2rem;
 }
 
 /* sessao Evolucao */
@@ -673,8 +683,7 @@ body {
 .sessaoConsultaAdicionar .notificacao input[type='radio']{
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #0091df;
-  margin-top: .5rem;  
+  margin-top: .5rem;
 
 }
 
