@@ -34,8 +34,7 @@ body {
   text-decoration: none;
   color: black;
   font-size: 1.8rem;
-  margin-right: 4rem;
-  /* margin-top: .1rem; */
+  margin-bottom: 2rem;
 }
 
 .icone-voltar span {
@@ -53,20 +52,29 @@ body {
   width: 100%;
   height: 6.2rem;
   background-color: #cbcdcf;
-
+  padding-inline: 4rem;
   display: flex;
   justify-content: space-between;
 }
 
 .container .nome-pagina {
   display: flex;
-  padding: 1.2rem 2.4rem;
+  gap: 2.5rem;
+  /* justify-content: center; */
+  align-items: center;
+  margin: auto 4rem;
+  overflow: none;
+}
+
+.container .nome-pagina .icone-voltar{
+  padding: 1.2rem 0 0 0;
+  margin-left: 2rem;
 }
 
 .container .nome-pagina p {
   font-size: 1.8rem;
-  line-height: 2, 2rem;
-  margin: auto auto;
+  /* justify-content: center; */
+  /* margin-left:  4rem; */
 }
 
 .perfil {

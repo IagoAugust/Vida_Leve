@@ -13,22 +13,39 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-  <header class="container">
+  <header class="container pc" style="overflow: none;">
     <div class="nome-pagina">
-      <a class="icone-voltar" href="/view/login.html">
-        <span class="material-symbols-outlined"> arrow_back </span>
-        Sair
-      </a>
       <p>Vida Leve</p>
     </div>
-    <div class="perfil">
+    <div class="perfil" >
       <p>Prof. Bagulho</p>
       <!-- Mudar para o nome do professor no Banco de dados -->
       <img src="/view/img/59.png" alt="Icone de perfil preto e cinza" />
     </div>
+  </header>
+  <header class="container mobile">
+    <div class="nome-pagina">
+      <p>Início</p>
+    </div>
+
+    <div class="menu ">
+      <ul>
+        <li><a class="perfil-mobile" href="#"><h2>Prof Bagulho</h2> <img src="./img/59.png"> </a></li>
+        <li><a href="#">Configuração</a></li>
+        <li><a href="./login.html">Sair</a></li>
+      </ul>
+    </div>
+
+    <button class="hamburger">
+      <i class="menuIcon material-icons selecionadoIcon">menu</i>
+      <i class="closeIcon material-icons ">close</i>
+    </button>
+
+    
   </header>
 
   <div class="box-geral">
@@ -138,6 +155,7 @@
       </div>
     </div>
   </div>
+  <script src="./script.js"></script>
 </body>
 
 </html>

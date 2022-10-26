@@ -123,6 +123,17 @@ body {
   padding: 3.9rem 3.2rem;
 }
 
+.hamburger {
+  position: absolute;
+  z-index: 100;
+  top: .7rem;
+  right: 1.5rem;
+  padding: .3rem;
+  border: .1rem  solid black ;
+  background: white;
+  cursor: pointer;
+}
+
 .sessao .pacienteStatus .cabecalho img {
   width: 8.929rem;
   height: 8.929rem;
@@ -688,17 +699,37 @@ body {
 }
 
 
-
-
+  /* conteudo */
 
 .sessao .abaConteudo {
   display: none;
 }
-/* 
-.sessao .abaSemConteudo{
-  display: none;
-} */
-
 .sessao .abaSelecionado {
   display: flex;
+}
+.icone svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+
+@media screen and (max-width: 1250px) {
+
+
+  /* Template */
+
+  .template {
+    display: grid;
+    grid-template-areas:
+      'cabecalho cabecalho '
+      'sessao sessao '
+      'sessao sessao  ';
+
+    grid-template-columns: 12% 88%;
+
+    grid-template-rows: 10rem;
+  }
+  .menu {
+    display: none;
+  }
 }
