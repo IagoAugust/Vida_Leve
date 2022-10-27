@@ -123,16 +123,6 @@ body {
   padding: 3.9rem 3.2rem;
 }
 
-.hamburger {
-  position: absolute;
-  z-index: 100;
-  top: .7rem;
-  right: 1.5rem;
-  padding: .3rem;
-  border: .1rem  solid black ;
-  background: white;
-  cursor: pointer;
-}
 
 .sessao .pacienteStatus .cabecalho img {
   width: 8.929rem;
@@ -712,6 +702,11 @@ body {
   height: 2.5rem;
 }
 
+#btnHamburger{
+  position: fixed;
+  visibility: hidden;
+  
+}
 
 @media screen and (max-width: 1250px) {
 
@@ -729,7 +724,74 @@ body {
 
     grid-template-rows: 10rem;
   }
+
+  #btnHamburger.hamburger {    
+    visibility: visible;
+    position: fixed;
+    z-index: 100;
+    top: 1.3rem;
+    left: 5rem;
+    padding: .3rem;
+    border: .1rem  solid black ;
+    background: white;
+    cursor: pointer;
+    
+  }
+
+  
+  #btnHamburger.hamburger-close{
+    
+    visibility: visible;
+    position: fixed;
+    z-index: 100;
+    top: 1.5rem;
+    left: 15.5rem;
+    padding: .3rem;
+    border: .1rem  solid black ;
+    background: white;
+    cursor: pointer;
+    
+  }
+
   .menu {
+    transform: translateX(-100%);
+    width: 20rem;
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    padding-top: 4rem;
+    border-right: .1rem solid #000;
+  }
+
+  
+  .mostrarMenu {
+    transform: translateZ(0);
+  }
+
+ 
+
+
+  #btnHamburger .closeIcon {
     display: none;
+    
+    
+  }
+
+  #btnHamburger .menuIcon {
+    display: none;
+  }
+
+  #btnHamburger .selecionadoIcon{
+    display: inline-block;
+  }
+
+   .menu .topicos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vw;
   }
 }

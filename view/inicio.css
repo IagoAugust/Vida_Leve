@@ -479,7 +479,7 @@
    .lista .box-elementos .elementos .box-paciente .paciente{
     justify-content: center;
     gap: 8vw;
-    background-color: #324054;
+    /* background-color: #324054; */
   }
 
   .box-dados{
