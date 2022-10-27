@@ -21,6 +21,11 @@
       <div class="nome-pagina">
 
         <button id="btnHamburger" class="hamburger">
+          <a id="icone-volar-mobile" class="" href="/view/inicio.html">
+            <span class="material-symbols-outlined"> arrow_back </span>
+            Voltar
+          </a>
+
           <i class="menuIcon material-icons selecionadoIcon">menu</i>
           <i class="closeIcon material-icons ">close</i>
         </button>
@@ -460,23 +465,23 @@
               <th>Consulta</th>
               <th>Hora</th>
               <th>Área</th>
-              <th>Profissional</th>
-              <th>Status</th>
+              <th class="profissional" >Profissional</th>
+              <th class="status">Status</th>
             </thead>
             <tbody>
               <tr>
                 <td>09/09/2022</td>
                 <td>08:30</td>
                 <td>Enfermagem</td>
-                <td>Prof. Bagulho</td>
-                <td class="status-conluido">Concluído</td>
+                <td class="profissional" >Prof. Bagulho</td>
+                <td class="status status-conluido">Concluído</td>
               </tr>
               <tr>
                 <td>09/011/2022</td>
                 <td>08:30</td>
                 <td>Ed. Física</td>
-                <td>Prof. Bagulho</td>
-                <td class="status-agendado">Agendado</td>
+                <td class="profissional">Prof. Bagulho</td>
+                <td class="status status-agendado">Agendado</td>
               </tr>
 
 
@@ -625,7 +630,6 @@
   </section>
   <script src="paciente.js"></script>
   <script src="consulta.js"></script>
-  <script src="script.js"></script>
 </body>
 
 </html>

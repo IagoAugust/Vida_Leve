@@ -708,6 +708,10 @@ body {
   
 }
 
+ #icone-volar-mobile{
+  display: none;
+}
+
 @media screen and (max-width: 1250px) {
 
 
@@ -727,7 +731,7 @@ body {
 
   #btnHamburger.hamburger {    
     visibility: visible;
-    position: fixed;
+    position: absolute;
     z-index: 100;
     top: 1.3rem;
     left: 5rem;
@@ -794,4 +798,172 @@ body {
     justify-content: space-between;
     height: 50vw;
   }
+
+  /* sessao menuinformacaos */
+  .sessao .menuInformacao {
+    padding-left: 8rem;
+  }
+
+
+  /*Consulta */
+  .sessao .abaConteudo .novaObservacao {
+    margin-right: 1.5rem;
+  }
+
+
+
+}
+
+@media screen and (max-width:800px) {
+  .sessao .abaConteudo .novaObservacao {
+    justify-content: right;
+    margin-right: 0;
+    margin-block: 2.5rem;
+  }
+
+  .sessao .sessaoEvolucao .buscar > div {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    padding-right: 3rem;
+  }
+
+  .sessao .sessaoEvolucao .cardPesquisa {
+    margin-left: 0rem;
+    justify-content: center;
+  }
+
+  .sessao .menuInformacao {
+    padding-left: 2.5rem;
+  }
+}
+
+@media screen and (max-width:640px){
+
+  /* .perfil p {
+    display: none;
+  } */
+  
+  .perfil img{
+    display: none;
+  }
+
+  .sessao .abaConteudo .novaObservacao {
+    justify-content: center;
+    margin-right: 0;
+    margin-block: 2.5rem;
+  }
+
+  .icone-voltar{
+    display: none;
+  }
+
+  #icone-volar-mobile.voltar-mobile{
+    display: block;
+    position: fixed;
+    top: 1.5rem;
+    right: 46rem;
+    left: 1.5rem;
+    text-decoration: none;
+    color: #000;
+  }
+
+  
+  #btnHamburger.hamburger-close{
+    
+    visibility: visible;
+    position: fixed;
+    z-index: 100;
+    top: 1.5rem;
+    left: 46rem;
+    right: 1.5rem;
+    padding: .3rem;
+    border: .1rem  solid black ;
+    background: white;
+    cursor: pointer;
+    
+  }
+
+  .menu {
+    display: inline-block;
+    transform: translateX(-100%);
+    width: 100%;
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    padding-top: 4rem;
+    border-right: .1rem solid #000;
+  }
+
+  
+  .mostrarMenu {
+    transform: translateZ(0);
+  }
+
+ 
+
+
+  #btnHamburger .closeIcon {
+    display: none;
+    
+    
+  }
+
+  #btnHamburger .menuIcon {
+    display: none;
+  }
+
+  #btnHamburger .selecionadoIcon{
+    display: inline-block;
+  }
+
+
+
+
+
+
+
+  .sessao .sessaoEvolucao .buscar > div {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    padding-right: 3rem;
+  }
+
+  .sessao .sessaoEvolucao .cardPesquisa {
+    margin: 0rem;
+    gap: 2rem;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .sessao .menuInformacao {
+    padding-left: 2.5rem;
+  }
+
+  .sessao .sessaoEvolucao .card {
+    text-align: center;
+  }
+
+  .sessao .w100 {
+    flex-basis: 100%;
+    padding-inline: 5rem;
+  }
+  
+  .sessao .w50 {
+    flex-basis: 100%;
+    padding-inline: 5rem;
+  }
+
+  table .profissional,
+  table .status{
+    display: none;
+  }
+
 }
