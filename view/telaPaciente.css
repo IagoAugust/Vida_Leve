@@ -708,8 +708,10 @@ body {
   
 }
 
- #icone-volar-mobile{
+ .menu-voltar-mobile{
   display: none;
+  text-decoration: none;
+  color: #000;
 }
 
 @media screen and (max-width: 1250px) {
@@ -729,31 +731,31 @@ body {
     grid-template-rows: 10rem;
   }
 
-  #btnHamburger.hamburger {    
+  .icone-voltar{
+    display: none;
+  }
+
+  #btnHamburger{
     visibility: visible;
-    position: absolute;
     z-index: 100;
+    border: .1rem  solid black ;
+    background: white;
+    cursor: pointer;
+  }
+
+  #btnHamburger.hamburger {    
+    position: absolute;
     top: 1.3rem;
     left: 5rem;
     padding: .3rem;
-    border: .1rem  solid black ;
-    background: white;
-    cursor: pointer;
     
   }
 
-  
   #btnHamburger.hamburger-close{
-    
-    visibility: visible;
     position: fixed;
-    z-index: 100;
     top: 1.5rem;
     left: 15.5rem;
     padding: .3rem;
-    border: .1rem  solid black ;
-    background: white;
-    cursor: pointer;
     
   }
 
@@ -841,9 +843,64 @@ body {
 
 @media screen and (max-width:640px){
 
-  /* .perfil p {
-    display: none;
-  } */
+  /* menu */
+
+  .containerMenuMobile{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .selecionado-menu-voltar{
+    display: inline-block;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .7rem;
+    margin-left: 2rem;
+
+  }
+  .menu-voltar-mobile span:first-child{
+    border: .1rem solid #000;
+  }
+
+  .menu-voltar-mobile span:last-child{
+    margin-top: .2rem;
+  }
+
+  #btnHamburger{
+    visibility: visible;
+    z-index: 100;
+    border:0rem  solid black ;
+    background: white;
+    cursor: pointer;
+  }
+
+  #btnHamburger.hamburger {    
+    position: absolute;
+    top: 1.3rem;
+    left: 5rem;
+    padding: .3rem;
+    
+  }
+
+  #btnHamburger.hamburger-close{
+    width: 100%;
+    position: absolute;
+    top: 1.5rem;
+    left: 0rem;
+    padding: 0rem; 
+  }
+
+
+  #btnHamburger.hamburger-close i{ 
+    border: .1rem solid #000;
+    margin-right: 2rem;
+  }
+
+
+
   
   .perfil img{
     display: none;
@@ -854,41 +911,13 @@ body {
     margin-right: 0;
     margin-block: 2.5rem;
   }
-
-  .icone-voltar{
-    display: none;
-  }
-
-  #icone-volar-mobile.voltar-mobile{
-    display: block;
-    position: fixed;
-    top: 1.5rem;
-    right: 46rem;
-    left: 1.5rem;
-    text-decoration: none;
-    color: #000;
-  }
-
   
-  #btnHamburger.hamburger-close{
-    
-    visibility: visible;
-    position: fixed;
-    z-index: 100;
-    top: 1.5rem;
-    left: 46rem;
-    right: 1.5rem;
-    padding: .3rem;
-    border: .1rem  solid black ;
-    background: white;
-    cursor: pointer;
-    
-  }
-
   .menu {
     display: inline-block;
+    position: absolute;
     transform: translateX(-100%);
     width: 100%;
+    height: 130vh;
     transition: transform 0.2s;
     top: 0;
     left: 0;
@@ -897,35 +926,118 @@ body {
     z-index: 99;
     padding-top: 4rem;
     border-right: .1rem solid #000;
+    border-bottom: .1rem solid #000;
   }
 
-  
   .mostrarMenu {
     transform: translateZ(0);
   }
+  
+  .menu .logo {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    gap: 2rem;
+    margin: 2.5rem 0;
+    padding-right: 0%;
+    justify-content: center;
+  }
+  .menu .logo img {
+    width: 10rem;
+    height: 10rem;
+  }
+  
+  .menu .logo h2 {
+    padding: 0;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  
+  .menu .topicos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 79.9vh;
+  }
+  
+  .menu .topicos > div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    width: 50%;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    margin: 0 auto;
+  }
+  
+  .menu .topicos .icone {
+    width: 20rem;
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto;
+    height: 3.4rem;
+    padding-top: 1.5%;
+    padding-left: 1rem;
+    text-decoration: none;
+    color: #000;
+    border: 0.1rem solid #979393;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
 
+  .icone h3 {
+    padding-top: 2%;
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
+   
  
 
 
-  #btnHamburger .closeIcon {
-    display: none;
-    
-    
+
+  /* ************************************************************* */
+
+  .sessao {
+    margin: 0;
+    border: .1rem solid #000;
   }
 
-  #btnHamburger .menuIcon {
-    display: none;
+  .sessao .pacienteStatus .cabecalho{
+    display: flex;
+    align-items:center;
+    width: 100%;
+    margin: 0 auto;
   }
 
-  #btnHamburger .selecionadoIcon{
-    display: inline-block;
+  .sessao .pacienteStatus .cabecalho h3 {
+    font-size: 1.9rem;
+    line-height: 4rem;
+}
+
+  .sessao .menuInformacao {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-left: 0rem;
+    border-bottom: 0.1rem solid #200;
+    margin-bottom: 3.6rem;
   }
+  
+  .sessao .menuInformacao p {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1.4rem;
+    line-height: 1.2rem;
+    cursor: pointer;
+    border: .1rem solid #707070;
+  }
+  
 
 
-
-
-
-
+ 
 
   .sessao .sessaoEvolucao .buscar > div {
     justify-content: center;

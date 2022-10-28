@@ -52,14 +52,14 @@ hamburger.addEventListener("click", ()=> {
   if (menu.classList.contains("mostrarMenu")){
     hamburger.classList.add("hamburger")
     hamburger.classList.remove("hamburger-close")
-    voltarIcone.classList.remove("voltar-mobile")
+    voltarIcone.classList.remove("selecionado-menu-voltar")
     menu.classList.remove("mostrarMenu")
     closeIcon.classList.remove("selecionadoIcon")
     menuIcon.classList.add("selecionadoIcon")
   }else{
     hamburger.classList.remove("hamburger")
     hamburger.classList.add("hamburger-close")
-    voltarIcone.classList.add("voltar-mobile")
+    voltarIcone.classList.add("selecionado-menu-voltar")
     menu.classList.add("mostrarMenu")
     menuIcon.classList.remove("selecionadoIcon")
     closeIcon.classList.add("selecionadoIcon")
