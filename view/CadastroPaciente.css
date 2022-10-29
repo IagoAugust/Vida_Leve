@@ -1,157 +1,72 @@
-.login {
+
+.sessaoConteudo {
   display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: 0 auto 2.5rem;
+  background-color: aqua;
 }
 
-.login h1 {
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 5rem;
-
+.sessaoConteudo .descricao {
+  margin-bottom: 2.1rem;
 }
 
-.login input {
-  width: 50rem;
-  height: 4.2rem;
-  border: 0.1rem solid #aaa;
-  border-radius: 0.8rem;
-  margin: 1rem auto;
-  outline: none !important;
-  padding-left: 2rem;
-  font-size: 1.6rem;
-  background-color: #f0efff;
+.sessaoConteudo .descricao h3 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  margin-bottom: 0.5rem;
 }
 
-.login input::placeholder {
-  font-weight: 500;
-  color: var(--icon-abas);
+.sessaoConteudo .descricao div,
+.sessaoConteudo .descricao input {
+  width: 100%;
+  height: 3.1rem;
+  display: flex;
+  align-items: center;
+  border: 0.1rem solid #4d4d4d8a;
+  margin-left: 0.5rem;
 }
 
-.login input:focus {
-  border: 1px solid #000;
+.sessaoConteudo .descricao p,
+.sessaoConteudo .descricao input,
+.sessaoConteudo .descricao textarea,
+.sessaoConteudo .descricao label {
+  font-size: 1.5rem;
+  padding-left: 1rem;
 }
 
-.login div a {
-  margin: 1rem;
-  display: block;
-  text-align: right;
-  color: var(--icon-abas);
-  font-size: 1.3rem;
+.sessaoConteudo .descricao textarea{
+  padding-top: 1rem;
 }
 
-.login button {
-  width: 40rem;
-  height: 8rem;
-  background: #324054;
-  border-radius: 9px;
-  border: none;
-  margin: 0 auto;
-  margin-block: 2.2rem;
-
-  color: #fff;
-  font-size: 2.5rem;
-  cursor: pointer;
-  font-size: 3rem;
-}
-
-.login button:hover {
-  background-color: #4a607f;
-}
-
-.login p {
-  font-size: 1.6rem;
-  margin: 0 auto;
-  max-width: 23rem;
-}
-
-.login p a {
-  color: #4d47c3;
-}
-
-/* CODIGOS DIOGO */
-
-/* CODIGOS CSS DIOGO */
-
-form input[type='checkbox'] {
-  width: 2rem;
-  height: 2.5rem;
-  display: relative;
-  top: 3rem;
-  left: 2rem;
-}
-
-.login .informacao .T100 {
-  display: grid;
-  grid-template-columns: auto;
-  text-align: center;
-}
-
-.login .informacao .T100 input {
-  width: 100rem;
-  height: 6rem;
-}
-
-.login .T100 input {
-  font-size: 3rem;
-}
-
-.login .T50 input {
-  height: 6rem;
-}
-
-.login .informacao .T50 {
-  display: grid;
-  grid-template-areas: 'a b';
-  margin: auto 10rem;
-}
-
-.login .T50 input {
-  width: 49rem;
-  /* background-color: #666; */
-  display: inline;
-  flex-direction: row;
-  /* margin: 28px; */
-  font-size: 3rem;
-}
-
-.login .T100 .documentacao input {
-  height: 6rem;
-  width: 60rem;
-}
-
-.login {
-  display: grid;
-  grid-template-columns: auto;
-  overflow-wrap: none;
-}
-
-form .fotoPaciente {
-  /* margin: 0 auto; */
-  text-align: center;
-}
-
-form .fotoPaciente img {
-  width: 20rem;
-  height: 20rem;
+.sessaoConteudo .descricao textarea::placeholder{
+  margin-top: 2rem;
 }
 
 
-.T100 .documentacao {
-  display: grid;
+
+.w100 {
+  flex-basis: 100%;
+  padding-inline: 5rem;
 }
 
-
-.endereco input {
-  /* display: grid; */
-  height: 6rem;
-  width: 40rem;
-  font-size: 3rem;
-  grid-template-areas: 'a b';
+.w50 {
+  flex-basis: 50%;
+  padding-inline: 5rem;
 }
 
-.endereco #numero {
-  width: 40rem;
+.w35 {
+  flex-basis: 35%;
+  padding-inline: 5rem;
+}
+
+.w30 {
+  flex-basis: 20%;
+  margin-inline: 2rem;
+}
+
+.w65{
+  flex-basis: 65%;
+  padding-inline: 5rem;
 }

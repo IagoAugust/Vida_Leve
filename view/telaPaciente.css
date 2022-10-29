@@ -814,9 +814,45 @@ body {
 
 
 
+  /* sessaoadicionarobservacao */
+
+  
+  .sessaoConsultaAdicionar>.sessaoConteudo {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .sessaoConsultaAdicionar .calendario h2{
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .sessaoConsultaAdicionar .calendario.w35 {
+    flex-basis: calc(50% - 5rem) ;
+  }
+
+  .sessaoConsultaAdicionar .agendar-consulta.w50 {
+    flex-basis: calc(50% - 5rem);
+  }
+
+  .agendar-consulta form .w50 {
+    flex-basis: 100%;
+    padding-inline: 0rem;
+  }
+
+  .agendar-consulta form .w100 {
+    padding-inline: 0rem;
+  }
+
+  .sessaoEvolucaoAdicionar .btnSalva, .sessaoConteudo .btnSalva {
+    display: flex;
+    justify-content: center;
+  }
+
 }
 
 @media screen and (max-width:800px) {
+
   .sessao .abaConteudo .novaObservacao {
     justify-content: right;
     margin-right: 0;
@@ -859,8 +895,8 @@ body {
     align-items: center;
     gap: .7rem;
     margin-left: 2rem;
-
   }
+
   .menu-voltar-mobile span:first-child{
     border: .1rem solid #000;
   }
@@ -899,9 +935,6 @@ body {
     margin-right: 2rem;
   }
 
-
-
-  
   .perfil img{
     display: none;
   }
@@ -942,6 +975,7 @@ body {
     padding-right: 0%;
     justify-content: center;
   }
+
   .menu .logo img {
     width: 10rem;
     height: 10rem;
@@ -992,11 +1026,6 @@ body {
     font-size: 1.4rem;
   }
    
- 
-
-
-
-  /* ************************************************************* */
 
   .sessao {
     margin: 0;
@@ -1013,7 +1042,7 @@ body {
   .sessao .pacienteStatus .cabecalho h3 {
     font-size: 1.9rem;
     line-height: 4rem;
-}
+  }
 
   .sessao .menuInformacao {
     display: flex;
@@ -1034,10 +1063,6 @@ body {
     cursor: pointer;
     border: .1rem solid #707070;
   }
-  
-
-
- 
 
   .sessao .sessaoEvolucao .buscar > div {
     justify-content: center;
@@ -1077,5 +1102,28 @@ body {
   table .status{
     display: none;
   }
+
+
+    /* sessaoadicionarobservacao */
+
+  
+    .sessaoConsultaAdicionar>.sessaoConteudo {
+      justify-content: center;
+      gap: 5rem;
+    }
+  
+    .sessaoConsultaAdicionar .calendario h2{
+      text-align: center;
+      font-size: 2rem;
+    }
+  
+    .sessaoConsultaAdicionar .calendario.w35 {
+      width: 90%;
+      flex-basis: 100% ;
+    }
+  
+    .sessaoConsultaAdicionar .agendar-consulta.w50 {
+      flex-basis: 100% ;
+    }
 
 }
