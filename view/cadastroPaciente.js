@@ -1,12 +1,44 @@
+const inputFile = document.querySelector("#picture__input");
+const pictureImage = document.querySelector(".picture__image");
+const pictureImageTxt = "Escolha sua Imagem";
+pictureImage.innerHTML = pictureImageTxt;
+
+inputFile.addEventListener("change", function (e) {
+  const inputTarget = e.target;
+  const file = inputTarget.files[0];
+
+  if (file) {
+    const reader = new FileReader();
+
+    reader.addEventListener("load", function (e) {
+      const readerTarget = e.target;
+
+      const img = document.createElement("img");
+      img.src = readerTarget.result;
+      img.classList.add("picture__img");
+
+      pictureImage.innerHTML = "";
+      pictureImage.appendChild(img);
+    });
+
+    reader.readAsDataURL(file);
+  } else {
+    pictureImage.innerHTML = pictureImageTxt;
+  }
+});
+
+
+
 const radioTrabalha = document.querySelectorAll("input[name='trabalha']")
 
 radioTrabalha.forEach(radioSelecionado => {
   radioSelecionado.addEventListener("click", () =>{
     const radioTrabalhaAtivo = document.querySelector(".containerTrabalho input[value='Sim']")
+    const informacaoSobreTrabalho = document.querySelector(".informacaoprofissao")
     if(radioSelecionado == radioTrabalhaAtivo){
-      console.log("Foi selecionado o SIm para trabalho")
+      informacaoSobreTrabalho.classList.remove("naoSelecionado")
     }else{
-      console.log("foi selecionado o Não para trabalha")
+      informacaoSobreTrabalho.classList.add("naoSelecionado")
     }
 
   })
@@ -18,11 +50,11 @@ radioFilhos.forEach(radioSelecionado => {
   radioSelecionado.addEventListener("click", () =>{
 
     const radioFilhosAtivo = document.querySelector(".containerFilho input[value='Sim']")
-    
+    const quantidadeDeFilhos = document.querySelector(".informacaoFilhos")
     if(radioSelecionado == radioFilhosAtivo){
-      console.log("Foi selecionado o SIm para filho")
+      quantidadeDeFilhos.classList.remove("naoSelecionado")
     }else{
-      console.log("foi selecionado o Não para filho")
+      quantidadeDeFilhos.classList.add("naoSelecionado")
     }
 
   })
@@ -35,12 +67,15 @@ radioFuma.forEach(radioSelecionado => {
   radioSelecionado.addEventListener("click", () =>{
 
     const radioFumaAtivo = document.querySelector(".containerFuma input[value='Sim']")
+    const informacaoSobreFuma = document.querySelector(".informacaoFuma")
     
     if(radioSelecionado == radioFumaAtivo){
-      console.log("Foi selecionado o SIm para fuma")
+      informacaoSobreFuma.classList.remove("naoSelecionado")
     }else{
-      console.log("foi selecionado o Não para fuma")
+      informacaoSobreFuma.classList.add("naoSelecionado")
     }
 
   })
 })
+
+

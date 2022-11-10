@@ -312,7 +312,7 @@
     padding-inline: 2rem; 
   }
   .mobile .hamburger {
-    position: fixed;
+    position: absolute;
     z-index: 100;
     top: .7rem;
     right: 1.5rem;
@@ -376,11 +376,13 @@
     align-items: center;
     height: 100%;
     gap: 2rem;
+    border-radius: 10rem;
   }
 
   .menu  ul li .perfil-mobile img {
     width: 5rem;
     height: 5rem;
+    border-radius: 50%;
   }
 
   .menu  ul li .perfil-mobile h2 {

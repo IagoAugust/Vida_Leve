@@ -218,6 +218,13 @@ body {
   padding-inline: 5rem;
 }
 
+#container-principal .novaObservacao,
+#container-anamnese .novaObservacao
+{
+  justify-content: right;
+  margin-bottom: 2rem;
+}
+
 /* sessaoConteudo */
 
 .sessao .sessaoConteudo {
@@ -314,7 +321,8 @@ body {
   cursor: pointer;
 }
 
-.sessao .abaConteudo .adicionar {
+.sessao .abaConteudo .adicionar,
+.sessao .abaConteudo .editar{
   display: flex;
   gap: 1rem;
   height: 2rem;
