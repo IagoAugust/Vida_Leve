@@ -1,3 +1,13 @@
+<?php
+  session_start();  
+  // phpinfo()
+  require_once('../../model/conexao.php');
+  require_once('../../Controller/listarPaciente.php');
+
+  // $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+  $_SESSION['idPaciente'];
+  require_once('../../Controller/pacienteInfo.php');
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -6,53 +16,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vida Leve</title>
-  <link rel="stylesheet" href="/view/style.css" />
-  <link rel="stylesheet" href="/view/telaPaciente.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../css/telaPaciente.css" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <body>
   <section class="template">
-    <header class="cabecalho container">
-      <div class="nome-pagina">
-
-        <button id="btnHamburger" class="hamburger">
-          <div class="containerMenuMobile">
-              <a id="icone-volar-mobile" class="menu-voltar-mobile " href="/view/inicio.html">
-                <span class="icone-fechar material-symbols-outlined"> arrow_back </span>
-                <span>Voltar</span>
-              </a>
-  
-             <i class="menuIcon material-icons selecionadoIcon">menu</i>
-              <i class="closeIcon material-icons ">close</i>
-            </div>
-          </button>
-
-        <a class="icone-voltar" href="/view/inicio.html">
-          <span class="material-symbols-outlined"> arrow_back </span>
-          <span>Voltar</span>
-        </a>
-
-        
-      </div>
-      <div class="perfil">
-        <p>Iago</p>
-        <!-- Mudar para o nome do professor no Banco de dados -->
-        <img src="./img/icone-user.jpg" alt="Icone de perfil preto e cinza" />
-      </div>
-    </header>
+    <?php
+      include_once ('./templates/cabecalho.php'); 
+    ?>
     <sidenav class="menu">
       <div class="logo">
-        <img src="/view/img/logo-icone.svg" />
+        <img src="../img/logo-icone.svg" />
         <h2>Vida Leve</h2>
       </div>
       <div class="topicos">
         <div class="topicosSuperiores">
-          <a href="./pacientePrincipal.html" class="icone icone-selecionado">
+          <a href="./pacientePrincipal.php" class="icone ">
             <svg width="15" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M6 2C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4C4 4.53043 4.21071 5.03914 4.58579 5.41421C4.96086 5.78929 5.46957 6 6 6C6.53043 6 7.03914 5.78929 7.41421 5.41421C7.78929 5.03914 8 4.53043 8 4C8 3.46957 7.78929 2.96086 7.41421 2.58579C7.03914 2.21071 6.53043 2 6 2ZM2.5 12.5C2.36739 12.5 2.24021 12.5527 2.14645 12.6464C2.05268 12.7402 2 12.8674 2 13C2 13.1326 2.05268 13.2598 2.14645 13.3536C2.24021 13.4473 2.36739 13.5 2.5 13.5H9.5C9.63261 13.5 9.75979 13.4473 9.85355 13.3536C9.94732 13.2598 10 13.1326 10 13C10 12.8674 9.94732 12.7402 9.85355 12.6464C9.75979 12.5527 9.63261 12.5 9.5 12.5H2.5ZM0 2C0 1.46957 0.210714 0.960859 0.585786 0.585786C0.960859 0.210714 1.46957 0 2 0H10C10.5304 0 11.0391 0.210714 11.4142 0.585786C11.7893 0.960859 12 1.46957 12 2V14C12 14.5304 11.7893 15.0391 11.4142 15.4142C11.0391 15.7893 10.5304 16 10 16H2C1.46957 16 0.960859 15.7893 0.585786 15.4142C0.210714 15.0391 0 14.5304 0 14V2ZM10 1H2C1.73478 1 1.48043 1.10536 1.29289 1.29289C1.10536 1.48043 1 1.73478 1 2V10H3V8C3 7.73478 3.10536 7.48043 3.29289 7.29289C3.48043 7.10536 3.73478 7 4 7H8C8.26522 7 8.51957 7.10536 8.70711 7.29289C8.89464 7.48043 9 7.73478 9 8V10H11V2C11 1.73478 10.8946 1.48043 10.7071 1.29289C10.5196 1.10536 10.2652 1 10 1ZM1 11V14C1 14.2652 1.10536 14.5196 1.29289 14.7071C1.48043 14.8946 1.73478 15 2 15H10C10.2652 15 10.5196 14.8946 10.7071 14.7071C10.8946 14.5196 11 14.2652 11 14V11H1Z"
@@ -63,7 +49,7 @@
           </a>
             
           
-          <a href="./pacienteEnfermagem.html" class="icone">
+          <a href="./pacienteEnfermagem.php" class="icone">
             <svg
               width=" 20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -75,7 +61,7 @@
           </a>
           
           
-          <a href="./pacienteFisioterapia.html" class="icone">
+          <a href="./pacienteFisioterapia.php" class="icone">
             <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196 15.021 0 14.55 0 14V13C0 12.45 0.196 11.9793 0.588 11.588C0.979333 11.196 1.45 11 2 11C2.55 11 3.02067 11.196 3.412 11.588C3.804 11.9793 4 12.45 4 13V14C4 14.55 3.804 15.021 3.412 15.413C3.02067 15.8043 2.55 16 2 16ZM19.05 16H17.5C17.3333 16 17.2 15.9373 17.1 15.812C17 15.6873 16.9667 15.5417 17 15.375L17.275 14.3C17.3083 14.1667 17.375 14.0627 17.475 13.988C17.575 13.9127 17.6917 13.8917 17.825 13.925L19.175 14.125C19.4083 14.1583 19.6043 14.2627 19.763 14.438C19.921 14.6127 20 14.8167 20 15.05C20 15.3167 19.9083 15.5417 19.725 15.725C19.5417 15.9083 19.3167 16 19.05 16ZM15.35 15.65L12.5 14.7C12.3667 14.65 12.2667 14.5583 12.2 14.425C12.1333 14.2917 12.1333 14.1583 12.2 14.025L12.95 12.3C13.0167 12.1667 13.121 12.0707 13.263 12.012C13.4043 11.954 13.5417 11.9667 13.675 12.05L16.075 13.45C16.175 13.5 16.246 13.575 16.288 13.675C16.3293 13.775 16.3333 13.8833 16.3 14L16 15.3C15.9667 15.4333 15.8833 15.5377 15.75 15.613C15.6167 15.6877 15.4833 15.7 15.35 15.65ZM10.7 13.9L8.75 13.4C8.51667 13.3333 8.33333 13.2127 8.2 13.038C8.06667 12.8627 8 12.6583 8 12.425V11.5C8 11.1167 8.06667 10.7583 8.2 10.425C8.33333 10.0917 8.55833 9.825 8.875 9.625C8.95833 9.575 9.04167 9.54567 9.125 9.537C9.20833 9.529 9.29167 9.55 9.375 9.6L11.925 11C12.0417 11.0667 12.121 11.1623 12.163 11.287C12.2043 11.4123 12.2 11.5333 12.15 11.65L11.275 13.625C11.225 13.7417 11.146 13.825 11.038 13.875C10.9293 13.925 10.8167 13.9333 10.7 13.9ZM5.45 13C5.31667 13 5.20833 12.9623 5.125 12.887C5.04167 12.8123 4.99167 12.7167 4.975 12.6C4.85833 11.85 4.521 11.2293 3.963 10.738C3.40433 10.246 2.75 10 2 10H1.5C1.36667 10 1.25 9.95 1.15 9.85C1.05 9.75 1 9.63333 1 9.5C1 9.36667 1.05 9.25 1.15 9.15C1.25 9.05 1.36667 9 1.5 9H2.4C2.73333 9 3.05 8.95833 3.35 8.875C3.65 8.79167 3.94167 8.65833 4.225 8.475C4.30833 8.425 4.4 8.4 4.5 8.4C4.6 8.4 4.69167 8.425 4.775 8.475C5.10833 8.675 5.46667 8.81233 5.85 8.887C6.23333 8.96233 6.61667 9 7 9C7.2 9 7.34167 9.104 7.425 9.312C7.50833 9.52067 7.48333 9.725 7.35 9.925C7.2 10.1583 7.104 10.4083 7.062 10.675C7.02067 10.9417 7 11.2167 7 11.5V12.5C7 12.6333 6.95 12.75 6.85 12.85C6.75 12.95 6.63333 13 6.5 13H5.45ZM2.45 8C1.75 8 1.16667 7.77067 0.7 7.312C0.233333 6.854 0 6.28333 0 5.6C0 5.28333 0.0583333 4.975 0.175 4.675C0.291667 4.375 0.466667 4.10833 0.7 3.875L2 2.575V0H4V2.6C4 2.86667 3.946 3.12067 3.838 3.362C3.72933 3.604 3.58333 3.81667 3.4 4L2.125 5.3C2.09167 5.33333 2.06233 5.375 2.037 5.425C2.01233 5.475 2 5.525 2 5.575C2 5.69167 2.04167 5.79167 2.125 5.875C2.20833 5.95833 2.30833 6 2.425 6C2.55833 6 2.7 5.925 2.85 5.775C3.08333 5.575 3.33767 5.41233 3.613 5.287C3.88767 5.16233 4.18333 5.1 4.5 5.1C4.81667 5.1 5.11267 5.16233 5.388 5.287C5.66267 5.41233 5.91667 5.575 6.15 5.775L6.35 5.925C6.41667 5.975 6.49167 6 6.575 6C6.69167 6 6.79167 5.95833 6.875 5.875C6.95833 5.79167 7 5.69167 7 5.575C7 5.525 6.98767 5.475 6.963 5.425C6.93767 5.375 6.90833 5.33333 6.875 5.3L5.6 4C5.41667 3.81667 5.27067 3.604 5.162 3.362C5.054 3.12067 5 2.86667 5 2.6V0H7V2.575L8.3 3.875C8.53333 4.10833 8.70833 4.37067 8.825 4.662C8.94167 4.954 9 5.25833 9 5.575C9 6.25833 8.76667 6.83333 8.3 7.3C7.83333 7.76667 7.25 8 6.55 8C6.23333 8 5.93333 7.93333 5.65 7.8C5.36667 7.66667 5.10833 7.5 4.875 7.3C4.80833 7.25 4.75 7.204 4.7 7.162C4.65 7.12067 4.58333 7.1 4.5 7.1C4.38333 7.1 4.25833 7.16667 4.125 7.3C3.89167 7.5 3.62933 7.66233 3.338 7.787C3.046 7.91233 2.75 7.98333 2.45 8Z"
@@ -85,7 +71,7 @@
             <h3>Fisioterapia</h3>            
           </a>
 
-          <a href="./pacienteBiomedicina.html" class="icone">
+          <a href="./pacienteBiomedicina.php" class="icone ">
             <svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M2 17C0.9 17 0 17.9 0 19H14C14 17.9 13.1 17 12 17H8V15H11C12.1 15 13 14.1 13 13H5C3.34 13 2 11.66 2 10C2 8.91 2.59 7.96 3.46 7.44C3.17 7.03 3 6.54 3 6C3 5.79 3.04 5.58 3.09 5.38C2.17642 5.75906 1.39547 6.40006 0.845587 7.22222C0.295702 8.04437 0.00147995 9.01091 0 10C0 12.76 2.24 15 5 15V17H2Z"
@@ -101,7 +87,7 @@
             <h3>Biomedicina</h3>
           </a>
 
-          <a href="./pacientePsicologia.html" class="icone">
+          <a href="./pacientePsicologia.php" class="icone icone-selecionado">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M0 -2C-0.530433 -2 -1.03914 -1.78929 -1.41421 -1.41421C-1.78929 -1.03914 -2 -0.530433 -2 0V20C-2 20.5304 -1.78929 21.0391 -1.41421 21.4142C-1.03914 21.7893 -0.530433 22 0 22H3.59267V14.508C1.56333 12.9913 0 10.948 0 8.3C0 6.09867 0.918667 3.98733 2.55333 2.43133C4.18933 0.874 6.40667 0 8.72 0C10.4803 -0.00314903 12.2217 0.361769 13.8327 1.07133C15.0825 1.56843 16.1867 2.37308 17.0427 3.41067C17.8081 4.47781 18.2361 5.74988 18.2713 7.06267C18.278 7.36267 18.274 7.64667 18.27 7.92133C18.2553 8.89267 18.2433 9.748 18.7307 10.7587C18.7307 10.7587 20.1733 12.0567 19.984 13.098C19.7933 14.1393 17.9147 14.426 17.9147 14.426C17.9147 20.032 10.7813 17.6927 10.7813 17.6927V22H20C20.5304 22 21.0391 21.7893 21.4142 21.4142C21.7893 21.0391 22 20.5304 22 20V0C22 -0.530433 21.7893 -1.03914 21.4142 -1.41421C21.0391 -1.78929 20.5304 -2 20 -2H0Z"
@@ -117,7 +103,7 @@
             <h3>Psicologia</h3>
           </a>
 
-          <a href="./pacienteFarmacia.html" class="icone">
+          <a href="./pacienteFarmacia.php" class="icone">
             <svg width="20" height="7" viewBox="0 0 20 7" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M16.0637 0H3.93717C1.77173 0 0 1.49882 0 3.5C0 5.50118 1.77173 7 3.93717 7H16.0637C18.2283 7 20 5.50076 20 3.5C20 1.49882 18.2283 0 16.0637 0ZM16.0649 6.17647H10.0524V0.823529H16.0649C17.6616 0.823529 18.9692 2.02382 18.9692 3.5C18.9692 4.97618 17.662 6.17647 16.0649 6.17647Z"
@@ -128,7 +114,7 @@
 
           </a>
 
-          <a href="./pacienteEdFisica.html" class="icone">
+          <a href="./pacienteEdFisica.php" class="icone">
             <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M11.5 4C12.3284 4 13 3.10457 13 2C13 0.89543 12.3284 0 11.5 0C10.6716 0 10 0.89543 10 2C10 3.10457 10.6716 4 11.5 4Z"
@@ -141,7 +127,7 @@
             <h3>Ed. Física</h3>
           </a>
 
-          <a href="./pacienteNutricao.html" class="icone">
+          <a href="./pacienteNutricao.php" class="icone">
             <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M0.89373 4.02531C0.401923 3.57514 0.066161 2.84488 0.000411292 1.66533C-0.00213202 1.60803 0.00714072 1.55082 0.0276529 1.49725C0.0481652 1.44368 0.0794784 1.39491 0.119645 1.35396C0.159812 1.31301 0.207973 1.28077 0.261134 1.25923C0.314295 1.23769 0.37132 1.22731 0.428661 1.22875C1.16287 1.2419 1.72524 1.29187 2.15481 1.41855C2.33891 0.941208 2.70579 0.491042 3.2559 0.079449C3.32503 0.027867 3.40897 0 3.49523 0C3.58148 0 3.66542 0.027867 3.73455 0.079449C4.28948 0.49411 4.65768 0.94866 4.84046 1.43039C5.28274 1.28135 5.8495 1.2384 6.56311 1.22788C6.62042 1.22661 6.67737 1.23715 6.73044 1.25882C6.78351 1.2805 6.83155 1.31285 6.87159 1.35387C6.91163 1.3949 6.9428 1.44372 6.96318 1.49729C6.98356 1.55087 6.9927 1.60807 6.99004 1.66533C6.92429 2.84488 6.58853 3.57514 6.09672 4.02487C6.33693 4.20415 6.47632 4.50396 6.42547 4.82877C6.24267 5.97235 6.02207 7.10956 5.76403 8.23855H3.0569V9.11521H5.55757C5.19028 10.6249 4.75768 12.1179 4.26099 13.5901C4.21056 13.7539 4.10898 13.8971 3.97116 13.9989C3.83334 14.1006 3.66654 14.1555 3.49523 14.1555C3.32391 14.1555 3.15711 14.1006 3.01929 13.9989C2.88147 13.8971 2.77989 13.7539 2.72946 13.5901C2.52258 12.9789 2.32734 12.3638 2.14385 11.7452H3.0569V10.8685H1.89137C1.47671 9.38215 1.16813 8.03253 0.944138 6.92355H2.61856V6.04689H0.774504C0.686838 5.5713 0.61802 5.16146 0.56542 4.82833C0.541179 4.67724 0.558988 4.52239 0.616897 4.38075C0.674806 4.23911 0.770581 4.11614 0.89373 4.02531ZM4.02079 1.74116L4.31973 2.53016L5.11968 2.26102C5.34016 2.18695 5.63867 2.14267 6.06385 2.12076C5.93366 2.96761 5.62026 3.32529 5.33403 3.51027C4.92594 3.77414 4.33112 3.85436 3.50838 3.85523H3.48208C2.65933 3.85436 2.06451 3.77414 1.65643 3.50983C1.37063 3.32529 1.05767 2.96805 0.927043 2.12295C1.36581 2.14706 1.67791 2.19177 1.90671 2.25927L2.68168 2.48808L2.97274 1.73415C3.05602 1.51718 3.21776 1.2739 3.49523 1.01792C3.77576 1.27653 3.93794 1.52244 4.02079 1.74116ZM12.5718 2.41181C11.7069 3.27664 11.6228 4.4838 12.1089 5.62039C14.2365 4.22782 16.6452 5.95046 16.6452 8.67688C16.6452 11.0978 14.4864 13.0602 11.8235 13.0602C9.16066 13.0602 7.00188 11.0978 7.00188 8.67688C7.00188 6.13806 9.09052 4.4689 11.0959 5.37624C10.7536 4.14892 10.9306 2.81288 11.952 1.79201L12.5718 2.41181ZM15.317 9.65962C15.3321 9.60341 15.3358 9.54476 15.328 9.4871C15.3202 9.42943 15.301 9.3739 15.2714 9.32374C15.2419 9.27359 15.2027 9.22981 15.1561 9.19496C15.1095 9.16012 15.0564 9.1349 15 9.12079C14.9435 9.10668 14.8848 9.10394 14.8273 9.11276C14.7698 9.12157 14.7146 9.14175 14.6649 9.17211C14.6153 9.20248 14.5722 9.24243 14.5381 9.28963C14.5041 9.33683 14.4798 9.39034 14.4667 9.44703C14.3832 9.79527 14.205 10.1136 13.9518 10.3668C13.6986 10.6201 13.3802 10.7983 13.032 10.8817C12.92 10.9106 12.8239 10.9827 12.7648 11.0821C12.7056 11.1816 12.6882 11.3004 12.7164 11.4126C12.7445 11.5249 12.8158 11.6214 12.9149 11.6813C13.0139 11.7411 13.1326 11.7594 13.245 11.732C13.7472 11.61 14.2062 11.3522 14.5717 10.9867C14.9371 10.6212 15.195 10.1623 15.317 9.66006V9.65962Z"
@@ -164,7 +150,7 @@
 
             <h3>Configuração</h3>
           </a>
-          <a href="./login.html" class="icone">
+          <a href="../../index.html" class="icone">
             <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M9.49169 9.83335L7.57502 11.7417C7.49691 11.8191 7.43492 11.9113 7.39261 12.0129C7.3503 12.1144 7.32852 12.2233 7.32852 12.3333C7.32852 12.4434 7.3503 12.5523 7.39261 12.6538C7.43492 12.7554 7.49691 12.8475 7.57502 12.925C7.65249 13.0031 7.74466 13.0651 7.84621 13.1074C7.94776 13.1497 8.05668 13.1715 8.16669 13.1715C8.2767 13.1715 8.38562 13.1497 8.48717 13.1074C8.58872 13.0651 8.68088 13.0031 8.75835 12.925L12.0917 9.59168C12.1676 9.51243 12.227 9.41897 12.2667 9.31668C12.35 9.11379 12.35 8.88623 12.2667 8.68335C12.227 8.58105 12.1676 8.4876 12.0917 8.40835L8.75835 5.07501C8.68066 4.99731 8.58841 4.93568 8.4869 4.89363C8.38538 4.85158 8.27657 4.82994 8.16669 4.82994C8.0568 4.82994 7.948 4.85158 7.84648 4.89363C7.74496 4.93568 7.65272 4.99731 7.57502 5.07501C7.49732 5.15271 7.43569 5.24495 7.39364 5.34647C7.35159 5.44799 7.32994 5.5568 7.32994 5.66668C7.32994 5.77656 7.35159 5.88537 7.39364 5.98689C7.43569 6.0884 7.49732 6.18065 7.57502 6.25835L9.49169 8.16668H1.50002C1.27901 8.16668 1.06704 8.25448 0.910765 8.41076C0.754484 8.56704 0.666687 8.779 0.666687 9.00001C0.666687 9.22103 0.754484 9.43299 0.910765 9.58927C1.06704 9.74555 1.27901 9.83335 1.50002 9.83335H9.49169ZM9.00002 0.666679C7.4426 0.659725 5.91439 1.08936 4.58874 1.90684C3.2631 2.72432 2.19307 3.89694 1.50002 5.29168C1.40056 5.49059 1.3842 5.72087 1.45453 5.93184C1.52485 6.14282 1.67611 6.31722 1.87502 6.41668C2.07393 6.51613 2.30421 6.5325 2.51519 6.46217C2.72616 6.39185 2.90056 6.24059 3.00002 6.04168C3.52685 4.97778 4.32821 4.07386 5.32131 3.42333C6.31441 2.77281 7.46321 2.39928 8.64898 2.34134C9.83476 2.2834 11.0145 2.54316 12.0663 3.09377C13.1181 3.64438 14.0037 4.46587 14.6318 5.47334C15.2598 6.48081 15.6074 7.63772 15.6387 8.8245C15.67 10.0113 15.3837 11.1849 14.8096 12.224C14.2355 13.2632 13.3943 14.1301 12.373 14.7354C11.3516 15.3406 10.1872 15.6621 9.00002 15.6667C7.75742 15.6721 6.53848 15.327 5.4831 14.6711C4.42771 14.0151 3.57865 13.0749 3.03335 11.9583C2.9339 11.7594 2.7595 11.6082 2.54852 11.5379C2.33754 11.4675 2.10727 11.4839 1.90835 11.5833C1.70944 11.6828 1.55818 11.8572 1.48786 12.0682C1.41753 12.2792 1.4339 12.5094 1.53335 12.7083C2.19404 14.0379 3.19795 15.1669 4.44125 15.9784C5.68454 16.7899 7.12206 17.2545 8.60512 17.3242C10.0882 17.3938 11.5629 17.066 12.8768 16.3746C14.1907 15.6832 15.296 14.6533 16.0784 13.3915C16.8608 12.1297 17.2919 10.6818 17.3271 9.19751C17.3623 7.71324 17.0003 6.2465 16.2786 4.94904C15.5568 3.65157 14.5016 2.57048 13.2219 1.8176C11.9423 1.06472 10.4847 0.667376 9.00002 0.666679V0.666679Z"
@@ -182,11 +168,11 @@
       <div class="pacienteStatus">
         <div class="cabecalho">
           <div>
-            <img src="./img/foto-paciente.jpg" />
+            <img src="../<?php echo $linha['path']?>" />
           </div>
           <div>
-            <h3>Logan Henderson</h3>
-            <p>Idade: <span>19 Anos</span></p>
+            <h3><?php echo $linha['nome']?></h3>
+            <p>Idade: <span><?php echo("$idade anos") ?></span></p>
             <div class="status">
               <div class="statusAtivo"></div>
               <p>Status: <span>Ativo</span></p>
@@ -194,10 +180,7 @@
           </div>
         </div>
         <div class="menuInformacao">
-          <p id="principal" class="informacao selecionado">
-            Principal
-          </p>
-          <p id="anamnese" class="informacao">
+          <p id="anamnese" class="informacao selecionado">
             Anamnese
           </p>
           <p id="evolucao" class="informacao">
@@ -208,159 +191,63 @@
           </p>
         </div>
       </div>
-      <!--pacienteStatus-->
+      <!-- pacienteStatus-->
 
-      <div id="container-principal" class="abaConteudo sessaoConteudo abaSelecionado  ">
-        <div class="novaObservacao w100">
-          <div id="editarPrincipal" class="editar">
-            <p>Editar</p>
-            <span class="material-symbols-outlined">add_circle </span>
-          </div>
-        </div>
-        
+      <div id="container-anamnese" class="abaConteudo sessaoConteudo abaSelecionado ">
         <div class="descricao w100">
-          <h3>Nome:</h3>
+          <h3>Atitude dos pais e familiares em relação à obesidade e à comida: </h3>
           <div>
-            <p>Logan Henderson</p>
+            <p> São parciais.</p>
           </div>
         </div>
-        <div class="descricao w50">
-          <h3>Idade:</h3>
+        <div class="descricao w100">
+          <h3>História psiquiátrica pessoaI e familiar.Depressão e outras patologias: </h3>
           <div>
-            <p>19 Anos</p>
+            <p> Tia com depressão</p>
           </div>
         </div>
-        <div class="descricao w50">
-          <h3>Data de Nascimento:</h3>
+        <div class="descricao w100">
+          <h3>ANÁLISE DO MODO DE VIDA: sedentário, hobbies, lazer: </h3>
           <div>
-            <p>01/05/1995</p>
+            <p> Gosto de correr, comer, conversar.</p>
           </div>
         </div>
-        <div class="descricao w50">
-          <h3>Peso:</h3>
+        <div class="descricao w100">
+          <h3>Avaliação da motivação para participar do projeto e para a mudança: </h3>
           <div>
-            <p>95 kg</p>
+            <p>Quero melhorar não só a minha saude fisica, como mental também. </p>
           </div>
         </div>
-        <div class="descricao w50">
-          <h3>Altura:</h3>
+        <div class="descricao w100">
+          <h3>Verificação do quanto o ambiente pode lhe proporcionar apoio (família, amigos, trabalho).</h3>
           <div>
-            <p>1.90 Cm</p>
+            <p> Dependendo da energia do ambiente, consigo ser mais produtivo</p>
           </div>
         </div>
-        <div class="descricao w50">
-          <h3>Estado Civil:</h3>
-          <div>
-            <p>Solteiro</p>
-          </div>
-        </div>
-        <div class="descricao w50">
-          <h3>Profissão:</h3>
-          <div>
-            <p>Arquiteto</p>
-          </div>
-        </div>
-        <div class="descricao w50">
-          <h3>CEP</h3>
-          <div>
-            <p>1234567890</p>
-          </div>
-        </div>
-        <div class="descricao w50">
-          <h3>Cidade: </h3>
-          <div>
-            <p>Araçapuca da Terra</p>
-          </div>
-        </div>
-        <div class="descricao w50">
-          <h3>Estado: </h3>
-          <div>
-            <p>Minas Gerais</p>
-          </div>
-        </div>
-        <div class="descricao w50">
-          <h3>Endereço</h3>
-          <div>
-            <p>Rua: Alfedro de Lopes</p>
-          </div>
-        </div>
-        <div class="descricao w50">
-          <h3>Número:</h3>
-          <div>
-            <p>754</p>
-          </div>
-        </div>
-        <div class="descricao w50">
-          <h3>Bairro</h3>
-          <div>
-            <p>Salgueiro Salgado</p>
-          </div>
-        </div>
-        
-      </div>
-      <!--containerPrincipal-->
-
-      <div id="container-anamnese" class="abaConteudo sessaoConteudo ">
-        <div class="novaObservacao w100">
-          <div id="editarAnamnese" class="editar">
-            <p>Editar</p>
-            <span class="material-symbols-outlined">add_circle </span>
-          </div>
-        </div>
-        <div class="descricao w50">
-          <h3>Hábitos:</h3>
-          <div>
-            <p> Correr, comer, e tocar piano.</p>
-          </div>
-        </div>
-        <div class="descricao w50">
-          <h3>Frequência Cardíaca</h3>
-          <div>
-            <p> 60 bpm</p>
-          </div>
-        </div>
-        <div class="descricao w50">
-          <h3>Pressão arterial</h3>
-          <div>
-            <p> 12/8 </p>
-          </div>
-        </div>
-        <div class="descricao w50">
-          <h3>Pulso</h3>
-          <div>
-            <p> 50 bpm </p>
-          </div>
-        </div>
-        <div class="descricao w50">
-          <h3>Temperatura</h3>
-          <div>
-            <p> 37º C</p>
-          </div>
-        </div>
-        <div class="descricao w50">
+        <!-- <div class="descricao w50">
           <h3>Glicemia Capilar</h3>
           <div>
-            <p> --- </p>
+            <p></p>
           </div>
         </div>
         <div class="descricao w50">
           <h3>Saturação</h3>
           <div>
-            <p> --- </p>
+            <p></p>
           </div>
         </div>
         <div class="descricao w50">
           <h3>Frequência Respiratória</h3>
           <div>
-            <p> 17 mrm </p>
+            <p></p>
           </div>
         </div>
-        <div class="descricao w50">
+        <div class="descricao w100">
           <h3>Possui alguma dor</h3>
           <div>
-            <p>Sim, Na cintura. </p>
+            <p>Sim, Na area inferior no estomago</p>
           </div>
-        </div>
+        </div> -->
       </div>
       <!--containerAnanese-->
 
@@ -518,23 +405,23 @@
               <th>Consulta</th>
               <th>Hora</th>
               <th>Área</th>
-              <th class="profissional" >Profissional</th>
-              <th class="status">Status</th>
+              <th>Profissional</th>
+              <th>Status</th>
             </thead>
             <tbody>
               <tr>
                 <td>09/09/2022</td>
                 <td>08:30</td>
                 <td>Enfermagem</td>
-                <td class="profissional" >Iago</td>
-                <td class="status status-conluido">Concluído</td>
+                <td>Iago</td>
+                <td class="status-conluido">Concluído</td>
               </tr>
               <tr>
                 <td>09/011/2022</td>
                 <td>08:30</td>
                 <td>Ed. Física</td>
-                <td class="profissional">Iago</td>
-                <td class="status status-agendado">Agendado</td>
+                <td>Iago</td>
+                <td class="status-agendado">Agendado</td>
               </tr>
 
 
@@ -546,7 +433,7 @@
       </div>
       <!--Containerconsulta-->
 
-      <div id="container-consultaadicionar" class="abaConteudo sessaoConsultaAdicionar">
+      <div id="container-consultaadicionar" class="abaConteudo sessaoConsultaAdicionar ">
         <div class="sessaoConteudo">
           <div class="calendario w35">
             <h2 id="ano">2022</h2>
@@ -681,8 +568,8 @@
     </div>
     <!--sessao-->
   </section>
-  <script src="paciente.js"></script>
-  <script src="consulta.js"></script>
+  <script src="../js/paciente.js"></script>
+  <script src="../js/consulta.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vida Leve</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../css/cadastroPaciente.css" />
+  <link rel="stylesheet" href="../css/inicio.css"/>
+  <!-- <link rel="stylesheet" href="/view/telaPaciente.css" /> -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <div class="containerTudo">
+    <header class="container pc" style="overflow: none;">
+      <div class="nome-pagina">
+        <a class="icone-voltar" href="../php/inicio.php">
+          <span class="material-symbols-outlined"> arrow_back </span>
+          <span>Voltar</span>
+        </a>
+      </div>
+      <div class="perfil" >
+        <div id="selecionar-aba">
+          <p>Iago</p>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"/></svg>
+        
+          <div class="aba" onmouseleave="sairMenu()">
+            <ul>
+              <li><a href="#">Configuração</a></li>
+              <li><a href="../../index.html">Sair</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <img src="../img/icone-adm.jpeg" />
+      </div>
+    </header>
+    <header class="container mobile">
+      <div class="nome-pagina">
+        <p>Início</p>
+      </div>
+  
+      <div class="menu ">
+        <ul>
+          <li><a class="perfil-mobile" href="#"><h2>Prof Bagulho</h2> <img src="../img/icone-adm.jpeg"> </a></li>
+          <li><a href="#">Configuração</a></li>
+          <li><a href="../../index.html">Sair</a></li>
+        </ul>
+      </div>
+  
+      <button id="btnHamburger" class="hamburger">
+        <i class="menuIcon material-icons selecionadoIcon">menu</i>
+        <i class="closeIcon material-icons ">close</i>
+      </button>
+  
+      
+    </header>
+
+    <div class="containerCadastro">
+
+
+
+        <div class="informacoesPessoais">
+          <div class="imagem ">
+
+            <label class="picture" for="picture__input" tabIndex="0">
+              <span class="picture__image"></span>
+            </label>
+            
+            <input type="file" name="picture__input" id="picture__input">
+
+          </div>
+
+          <div class="informacaoEssenciais sessaoConteudo">
+            <h2 class="w100">Informações Essenciais </h2>
+
+            <div class="descricao w50">
+              <label for="nome">Nome</label>
+              <input type="text" name="nome">
+            </div>
+
+            <div class="descricao w50">
+              <label for="email">E-mail</label>
+              <input type="email" name="email">
+            </div>
+
+            <div class="descricao w20 telefone">
+              <label for="telefone">Telefone</label>
+              <input type="tel" name="telefone">
+            </div>
+
+            <div class="descricao w20 estadoCivil">
+              <label for="estadoCivil">EstadoCivil</label>
+              <input type="text" name="estadoCivil">
+            </div>
+
+            <div class="tamanhoPor3 w100">
+
+              <div class="descricao w10  ">
+                <label for="dataNascimento">Data Nascimento</label>
+                <input type="date" name="dataNascimento">
+              </div>
+
+              <div class="descricao w10 ">
+                <label for="idade">Idade</label>
+                <input type="number" name="idade">
+              </div>
+
+              <div class="descricao w10 ">
+                <label for="sexo">Sexo</label>
+                <input type="text" name="sexo">
+              </div>
+
+            </div>
+
+
+
+            <div class="descricao w50">
+              <label for="cpf">CPF</label>
+              <input type="number" name="cpf">
+            </div>
+
+            <div class="descricao w50">
+              <label for="rg">RG</label>
+              <input type="text" name="rg">
+            </div>
+
+            <div class="tamanhoPor3 w100">
+              <div class="descricao w10">
+                <label for="uf">UF</label>
+                <input type="text" name="uf">
+              </div>
+
+              <div class="descricao w10 ">
+                <label for="naturalidade">Naturalidade</label>
+                <input type="text" name="naturalidade">
+              </div>
+
+              <div class="descricao w10 ">
+                <label for="cor">Cor</label>
+                <input type="text" name="cor">
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="informacoesEndereco sessaoConteudo">
+            <h2 class="w100">Endereço</h2>
+
+            <div class="tamanhoPor3 w100">
+              <div class="descricao w10">
+                <label for="cep">CEP</label>
+                <input type="number" name="cep">
+              </div>
+  
+              <div class="descricao w10">
+                <label for="municipio">Município</label>
+                <input type="text" name="municipio">
+              </div>
+  
+              <div class="descricao w10 ">
+                <label for="uf">UF</label>
+                <input type="text" name="uf">
+              </div>
+            </div>
+            
+            <div class="tamanhoPor2 w100">
+              <div class="descricao w65 rua ">
+                <label for="rua">Rua</label>
+                <input type="text" name="rua">
+              </div>
+  
+              <div class="descricao w10">
+                <label for="numero">Numero</label>
+                <input type="number" name="numero">
+              </div>
+            </div>
+            
+
+            <div class="descricao w50">
+              <label for="bairro">Bairro</label>
+              <input type="text" name="bairro">
+            </div>
+
+            <div class="descricao w50">
+              <label for="complemento">Complemento</label>
+              <input type="text" name="complemento">
+            </div>
+          </div>
+
+          <div class="informacoesFamiliar sessaoConteudo ">
+            <h2 class="w100">Familiar</h2>
+            <div class="containerFilho descricao  w100">
+
+              <p class="w100">Você possui filhos?</p>
+              <div class="radiobox w100">
+                <input type="radio" name="filhos" value="Nao">
+                <label for="filhos">Não</label>
+              </div>
+
+              <div class="radiobox w100">
+                <input type="radio" name="filhos" value="Sim">
+                <label for="filhos">Sim</label>
+
+              </div>
+              <div class="informacaoFilhos naoSelecionado">
+                <label  for="quantidadeFilhos">Quantidade de filhos?</label>
+                <input  type="number" name="quantidadeFilhos">
+              </div>
+
+            </div>
+
+            <div class="descricao w50">
+              <label for="rendaFamiliar">Renda Familiar</label>
+              <input type="number" name="rendaFamiliar">
+            </div>
+
+            <div class="descricao w50">
+              <label for="locomocao">Locomoção</label>
+              <input type="text" name="locomocao">
+            </div>
+          </div>
+
+
+        </div>
+
+
+        <div class="informacaoGerais sessaoConteudo">
+          <h2 class="w100">Geral</h2>
+          <div class="containerTrabalho descricao w100 ">
+            <p>Você trabalha?</p>
+            <div class="radiobox w100">
+              <input type="radio" name="trabalha" value="Nao">
+              <label for="trabalha">Não</label>
+            </div>
+
+            <div class="radiobox w100">
+              <input type="radio" name="trabalha" value="Sim">
+              <label for="trabalha">Sim</label>
+            </div>
+
+            <div class="informacaoprofissao w100 naoSelecionado">
+                <div class=" descricao w50 profissao ">
+                  <label for="profissao">Qual é a Profissão</label>
+                  <input type="text" name="profissao">
+                </div>
+    
+                <div class="descricao w15 cargaHoraria ">
+                  <label for="cargaHoraria">Carga Horaria Diária</label>
+                  <input type="number" name="cargaHoraria">
+                </div>
+
+            </div>
+
+
+            <p>O seu trabalho deixa você mais sedentário</p>
+            <div class="radiobox w100 ">
+              <input type="radio" name="sedentario" value="Nao">
+              <label for="sedentario">Não</label>
+            </div>
+            <div class="radiobox w100">
+              <input type="radio" name="sedentario" value="Sim">
+              <label for="sedentario">Sim</label>
+            </div>
+
+          </div>
+
+          <div class="descricao w50">
+            <label for="religiao">Religião</label>
+            <input type="text" name="religiao">
+          </div>
+
+          <div class="descricao w50">
+            <label for="habito">Habitos</label>
+            <input type="text" name="habito">
+          </div>
+
+          <div class="containerFuma descricao w100">
+
+            <p>Você Fuma?</p>
+            <div class="radiobox w100">
+              <input type="radio" name="fuma" value="Nao">
+              <label for="fuma">Não</label>
+            </div>
+            <div class="radiobox w100">
+              <input type="radio" name="fuma" value="Sim">
+              <label for="fuma">Sim</label>
+            </div>
+
+            <div class="informacaoFuma descricao w15 naoSelecionado ">
+              <label for="quantidade">Quantidade diária</label>
+              <input type="number" name="quantidade">
+            </div>
+
+          </div>
+
+          <div class="descricao w50 bebidaalcoolica">
+            <label for="bebidaalcoolica">Qual sua frequência do uso de bebida alcoólica?</label>
+            <input type="text" name="bebidaalcoolica">
+          </div>
+
+          
+        </div>
+
+        <div class="botoes sessaoConteudo">
+          <button type="reset">Cancelar</button>
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+
+
+    </div>
+
+    
+
+  </div>
+
+  <script src="../script.js"></script>
+  <script src="../js/cadastroPaciente.js"></script>
+  <script src="../js/inicio.js"></script>    
+</body>
+
+</html>

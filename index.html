@@ -8,8 +8,8 @@
     <!-- <style>
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Inter:wght@200;400;500;700&display=swap');
     </style> -->
-    <link rel="stylesheet" href = "/view/style.css"> 
-    <link rel="stylesheet" href="/view/login.css">
+    <link rel="stylesheet" href = "./view/style.css"> 
+    <link rel="stylesheet" href="./view/css/login.css">
 </head>
 <body>
 
@@ -18,16 +18,15 @@
       
         <div class="grupo-2">
           
-            <Img class="img-logo" src="/view/img/logo.jpg"></Img>
+            <Img class="img-logo" src="./view/img/logo.jpg"></Img>
 
-            <form class="login">
+            <form id="logar" class="login" method="post" action="./Controller/fazLogin.php">
                 <h1>Login</h1>
-                <input type="text" placeholder="E-mail">
-                <input type="password" placeholder="Senha">
+                <input type="email" name="email" placeholder="E-mail">
+                <input type="password" name="senha" placeholder="Senha">
                 <div><a href="">Esqueceu a senha?</a></div>
-                <!-- <a href="/inicio.html"><button>Entrar</button></a> -->
-                <button><a href="/view/inicio.html">Entrar</a></button>
-                <p>Caso não possua uma conta Você pode se <a href="/view/cadastro.html">Registrar aqui</a></p>
+                <button type="submit" name="submit"  form="logar"  value="submit" >Entrar</button>
+                <p>Caso não possua uma conta Você pode se <a href="./view/html/cadastro.html">Registrar aqui</a></p>
 
             </form>
         </div>

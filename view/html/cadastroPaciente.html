@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vida Leve</title>
-  <link rel="stylesheet" href="/view/style.css" />
-  <link rel="stylesheet" href="/view/CadastroPaciente.css" />
-  <link rel="stylesheet" href="/view/inicio.css"/>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../css/cadastroPaciente.css" />
+  <link rel="stylesheet" href="../css/inicio.css"/>
   <!-- <link rel="stylesheet" href="/view/telaPaciente.css" /> -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -19,14 +19,25 @@
   <div class="containerTudo">
     <header class="container pc" style="overflow: none;">
       <div class="nome-pagina">
-        <a class="icone-voltar" href="/view/inicio.html">
+        <a class="icone-voltar" href="../php/inicio.php">
           <span class="material-symbols-outlined"> arrow_back </span>
           <span>Voltar</span>
         </a>
       </div>
       <div class="perfil" >
-        <p>Iago</p>
-        <img src="./img/icone-user.jpg" />
+        <div id="selecionar-aba">
+          <p>Iago</p>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"/></svg>
+        
+          <div class="aba" onmouseleave="sairMenu()">
+            <ul>
+              <li><a href="#">Configuração</a></li>
+              <li><a href="../../index.html">Sair</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <img src="../img/icone-adm.jpeg" />
       </div>
     </header>
     <header class="container mobile">
@@ -36,9 +47,9 @@
   
       <div class="menu ">
         <ul>
-          <li><a class="perfil-mobile" href="#"><h2>Prof Bagulho</h2> <img src="./img/icone-user.jpg"> </a></li>
+          <li><a class="perfil-mobile" href="#"><h2>Prof Bagulho</h2> <img src="../img/icone-adm.jpeg"> </a></li>
           <li><a href="#">Configuração</a></li>
-          <li><a href="./login.html">Sair</a></li>
+          <li><a href="../../index.html">Sair</a></li>
         </ul>
       </div>
   
@@ -310,9 +321,9 @@
 
   </div>
 
-  <script src="./script.js"></script>
-  <script src="./cadastroPaciente.js"></script>
-    
+  <script src="../script.js"></script>
+  <script src="../js/cadastroPaciente.js"></script>
+  <script src="../js/inicio.js"></script>    
 </body>
 
 </html>

@@ -83,6 +83,15 @@ body {
   padding: 1.2rem 2.4rem;
 }
 
+.perfil >div {  
+    flex-direction: row;
+    display: flex;
+}
+
+.perfil > div svg {
+  padding-top: .5rem;
+}
+
 .perfil p {
   margin: auto auto;
   font-size: 1.8rem;

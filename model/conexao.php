@@ -1,15 +1,17 @@
 <?php
 //error_reporting(0);
 
+$servidor="localhost";
 $usuario = "root";
 $senha = "root";
-$bd="projeto";
-$servidor="localhost";
+$dbname="projeto";
 
-if($conn = mysqli_connect($servidor, $usuario, $senha, $bd)){
-    //echo("UHULLLL Conectou");
-}else{
-    echo("Deu Ruim = ".mysqli_connect_errno($conn) . " -- " .mysqli_connect_error($conn));
-}
-
+  try{
+    $conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
+    
+  }
+  catch (Exception $e){
+    echo 'Exceção capturada: ',   $e->getMessage();
+  }
+  
 ?>

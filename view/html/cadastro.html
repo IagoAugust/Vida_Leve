@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Leve</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <!-- <a class="btn-voltar icone-voltar" href="../../index.php">
+        <span class="material-symbols-outlined"> arrow_back </span>
+        Voltar
+    </a> -->
+
+    <div class="container-login">
+
+        <div class="grupo-2">
+
+            <Img class="img-logo" src="../img/logo.jpg"></Img>
+
+            <form id="cadastro" class="login" method="POST" action="../../Controller/cadastro.php">
+                <h1>Cadastro</h1>
+                <input type="email" name="email" placeholder="E-mail">
+                <input id="nome" type="text" name="nome" placeholder="Nome">
+                <input type="text" name="cpf" placeholder="CPF">
+                <input id="senha" name="senha" type="password" placeholder="Senha">
+                <input id="confirmarSenha" type="password" placeholder="Confirmar Senha">
+                <div><a href="../../index.html">Já tem cadastro</a></div>
+                <button type="submit" name="submit"  form="cadastro"  value="submit" >Cadastrar</button>
+
+            </form>
+        
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
