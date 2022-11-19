@@ -480,11 +480,11 @@
   .lista>h2 {
     text-align: center;
   }
-
+/* 
   .lista .box-elementos .elementos {
     grid-template-columns: auto auto;
     grid-template-areas: auto auto;
-   }
+   } */
 
 
    .lista .box-elementos .paciente{
@@ -506,6 +506,14 @@
     justify-content: center;
   
     margin-top: 2rem;
+  }
+
+  .box-visita{
+    display: none;
+  }
+
+  .box-status{
+    display: none;
   }
 
 }

@@ -96,9 +96,9 @@
         <table class="" cellspacing="0">
           <thead>
             <th>Pacientes</th>
-            <th>Última Visita</th>
-            <th>CPF</th>
-            <th>Status</th>
+            <th class="box-visita">Última Visita</th>
+            <th class="box-visita">CPF</th>
+            <th class="box-status">Status</th>
           </thead>
           <tbody>
             <?php
@@ -121,14 +121,14 @@
                 </div>
               </td>
 
-              <td>
+              <td class="box-visita">
                 <div class="visita">
                   <h3>29 de Setembro, 2022</h3>
                   <p>Dois dias há atrás</p>
                 </div>
               </td>
 
-              <td>
+              <td class="box-dados">
                 <div class="dados">
                   <p><?php
                   // echo($linhaPaciente['cpf']); 
@@ -142,7 +142,7 @@
                 </div>
               </td>
 
-              <td>
+              <td class="box-status">
                 <div class="status">
                   <p class="status-ativo">Ativo</p>
                 </div>
@@ -158,7 +158,7 @@
             <tr>
               <td>
                 <div class="paciente" >
-                  <img src="../img/foto-paciente.jpg" />
+                  <img src="../img/icon-perfil.png" />
                   <a href="./pacientePrincipal.html">
                     <div>
                       <h3>nome</h3>
@@ -168,20 +168,20 @@
                 </div>
               </td>
 
-              <td>
+              <td class="box-visita">
                 <div class="visita">
                   <h3>29 de Setembro, 2022</h3>
                   <p>Dois dias há atrás</p>
                 </div>
               </td>
 
-              <td>
+              <td class="box-dados">
                 <div class="dados">
                   <p>523.547.859-12</p>
                 </div>
               </td>
 
-              <td>
+              <td class="box-status">
                 <div class="status">
                   <p class="status-inativo">Inativo</p>
                 </div>
